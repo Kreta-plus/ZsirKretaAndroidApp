@@ -1,17 +1,26 @@
 {
-  "versionCode": 4,
-  "versionName": "2.2",
+  "versionCode": 7,
+  "versionName": "2.3",
   "date": "2026-11-03",
   "minSdk": 26,
-  "apk": "ZsirKreta-2.2.apk",
-  "size": 5611063,
-  "sha256": "306011f21d35906a0587ed535cbd52efdb051d420c1865938944bf7ad45c14fe",
+  "apk": "ZsirKreta-2.3.apk",
+  "size": 5631527,
+  "sha256": "fbac65dc1998a8653516477aca225641a7b91f79a68f9089650571daea134a51",
   "signer": "b6e7b48b6df708d95c563a5db89dd73993c5e916fb5a03c2b9a40e0f09d64ee8",
   "notes": [
-    "Új: ...",
-    "Javítva: Tesztelés"
+    "Új: Alkalmazás értesítések",
+    "Javítva: -"
   ],
   "versions": [
+    {
+      "versionCode": 7,
+      "versionName": "2.3",
+      "date": "2026-11-03",
+      "notes": [
+        "Új: Alkalmazás értesítések",
+        "Javítva: -"
+      ]
+    },
     {
       "versionCode": 4,
       "versionName": "2.2",
