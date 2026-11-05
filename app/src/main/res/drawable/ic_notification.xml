@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Értesítési ikon: a ZsírKréta logó (a „Z” és a zsírkréta) egyszínű sziluettje -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="64"
+    android:viewportHeight="64">
+    <path
+        android:pathData="M11,21.5c6,-0.8 12,-1 18.5,-0.5L11.5,43.5c6.5,-0.9 13,-1 19.5,-0.5"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="6.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <group
+        android:translateX="34.5"
+        android:translateY="44"
+        android:rotation="45">
+        <path android:fillColor="#FFFFFFFF" android:pathData="M-2,0h4l4,-8h-12z" />
+        <path android:fillColor="#FFFFFFFF" android:pathData="M-4,-33h8a2,2 0,0 1,2 2v23.5h-12v-23.5a2,2 0,0 1,2 -2z" />
+    </group>
+</vector>

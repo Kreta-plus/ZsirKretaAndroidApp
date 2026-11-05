@@ -1,0 +1,280 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!-- Csak a fejlesztői (debug) buildben: a frissítés helyi tesztszerverről (az emulátorból 10.0.2.2) is kipróbálható. -->
+3<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+4    package="hu.zsirkreta.app"
+5    android:versionCode="7"
+6    android:versionName="2.3" >
+7
+8    <uses-sdk
+8-->INJECTED
+9        android:minSdkVersion="26"
+9-->INJECTED
+10        android:targetSdkVersion="37" />
+10-->INJECTED
+11
+12    <uses-permission android:name="android.permission.INTERNET" /> <!-- beépített frissítés: a letöltött új verzió átadása az Android telepítőjének -->
+12-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:4:5-67
+12-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:4:22-64
+13    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- értesítések és háttér-ellenőrzés -->
+13-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:6:5-83
+13-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:6:22-80
+14    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+14-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:8:5-77
+14-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:8:22-74
+15    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+15-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:9:5-81
+15-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:9:22-78
+16    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+16-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:10:5-95
+16-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:10:22-92
+17    <uses-permission
+17-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:11:5-106
+18        android:name="android.permission.SCHEDULE_EXACT_ALARM"
+18-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:11:22-76
+19        android:maxSdkVersion="32" />
+19-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:11:77-103
+20    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+20-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:12:5-74
+20-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:12:22-71
+21
+22    <permission
+22-->[androidx.core:core:1.16.0] /home/dani/.gradle/caches/9.6.0/transforms/e4f6b23d1385bb5e3a18c650f483fb9f/transformed/core-1.16.0/AndroidManifest.xml:22:5-24:47
+23        android:name="hu.zsirkreta.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+23-->[androidx.core:core:1.16.0] /home/dani/.gradle/caches/9.6.0/transforms/e4f6b23d1385bb5e3a18c650f483fb9f/transformed/core-1.16.0/AndroidManifest.xml:23:9-81
+24        android:protectionLevel="signature" />
+24-->[androidx.core:core:1.16.0] /home/dani/.gradle/caches/9.6.0/transforms/e4f6b23d1385bb5e3a18c650f483fb9f/transformed/core-1.16.0/AndroidManifest.xml:24:9-44
+25
+26    <uses-permission android:name="hu.zsirkreta.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+26-->[androidx.core:core:1.16.0] /home/dani/.gradle/caches/9.6.0/transforms/e4f6b23d1385bb5e3a18c650f483fb9f/transformed/core-1.16.0/AndroidManifest.xml:26:5-97
+26-->[androidx.core:core:1.16.0] /home/dani/.gradle/caches/9.6.0/transforms/e4f6b23d1385bb5e3a18c650f483fb9f/transformed/core-1.16.0/AndroidManifest.xml:26:22-94
+27
+28    <application
+28-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:14:5-87:19
+29        android:name="hu.zsirkreta.app.App"
+29-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:15:9-28
+30        android:allowBackup="false"
+30-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:16:9-36
+31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+31-->[androidx.core:core:1.16.0] /home/dani/.gradle/caches/9.6.0/transforms/e4f6b23d1385bb5e3a18c650f483fb9f/transformed/core-1.16.0/AndroidManifest.xml:28:18-86
+32        android:debuggable="true"
+33        android:enableOnBackInvokedCallback="true"
+33-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:23:9-51
+34        android:extractNativeLibs="false"
+34-->INJECTED
+35        android:icon="@mipmap/ic_launcher"
+35-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:17:9-43
+36        android:label="@string/app_name"
+36-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:19:9-41
+37        android:networkSecurityConfig="@xml/network_security_config"
+37-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/debug/AndroidManifest.xml:4:18-78
+38        android:roundIcon="@mipmap/ic_launcher_round"
+38-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:18:9-54
+39        android:supportsRtl="false"
+39-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:20:9-36
+40        android:theme="@style/Theme.ZsirKreta"
+40-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:21:9-47
+41        android:usesCleartextTraffic="false" > <!-- hibajelentés: GlitchTip (Sentry SDK); a release-t (csomagnév@verzió+kód) az SDK magától állítja -->
+41-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:22:9-45
+42        <meta-data
+42-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:26:9-28:96
+43            android:name="io.sentry.dsn"
+43-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:27:13-41
+44            android:value="https://7a6bd9a4f23840729de14b8a80f4fb13@app.glitchtip.com/29550" />
+44-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:28:13-93
+45        <meta-data
+45-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:29:9-31:36
+46            android:name="io.sentry.traces.sample-rate"
+46-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:30:13-56
+47            android:value="0.01" />
+47-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:31:13-33
+48        <meta-data
+48-->INJECTED
+49            android:name="io.sentry.environment"
+50            android:value="debug" />
+50-->INJECTED
+51
+52        <activity
+52-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:36:9-46:20
+53            android:name="hu.zsirkreta.app.MainActivity"
+53-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:37:13-41
+54            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode|keyboard|keyboardHidden|density|fontScale|locale|layoutDirection"
+54-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:41:13-163
+55            android:exported="true"
+55-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:38:13-36
+56            android:launchMode="singleTop"
+56-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:39:13-43
+57            android:windowSoftInputMode="adjustResize" >
+57-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:40:13-55
+58            <intent-filter>
+58-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:42:13-45:29
+59                <action android:name="android.intent.action.MAIN" />
+59-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:43:17-69
+59-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:43:25-66
+60
+61                <category android:name="android.intent.category.LAUNCHER" />
+61-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:44:17-77
+61-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:44:27-74
+62            </intent-filter>
+63        </activity>
+64        <activity
+64-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:48:9-51:116
+65            android:name="hu.zsirkreta.app.ui.WebLoginActivity"
+65-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:49:13-48
+66            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode|keyboardHidden"
+66-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:51:13-113
+67            android:exported="false" />
+67-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:50:13-37
+68        <activity
+68-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:53:9-56:116
+69            android:name="hu.zsirkreta.app.ui.PackActivity"
+69-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:54:13-44
+70            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode|keyboardHidden"
+70-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:56:13-113
+71            android:exported="false" />
+71-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:55:13-37
+72
+73        <provider
+73-->INJECTED
+74            android:name="androidx.core.content.FileProvider"
+75            android:authorities="hu.zsirkreta.app.files"
+75-->INJECTED
+76            android:exported="false"
+77            android:grantUriPermissions="true" >
+78            <meta-data
+79                android:name="android.support.FILE_PROVIDER_PATHS"
+80                android:resource="@xml/file_paths" />
+81        </provider> <!-- háttér-ellenőrzés és esti emlékeztető (csak az AlarmManager hívja) -->
+82        <receiver
+82-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:68:9-70:40
+83            android:name="hu.zsirkreta.app.bg.Alarms$Tick"
+83-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:69:13-43
+84            android:exported="false" /> <!-- a KRÉTA-belépés életben tartása (naponta kétszeri token-megújítás, csak a JobScheduler indíthatja) -->
+84-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:70:13-37
+85        <service
+85-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:73:9-76:72
+86            android:name="hu.zsirkreta.app.bg.KeepAlive"
+86-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:74:13-41
+87            android:exported="false"
+87-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:75:13-37
+88            android:permission="android.permission.BIND_JOB_SERVICE" /> <!-- újraindítás / app-frissítés után az időzítés visszaállítása (csak védett rendszer-üzenetek) -->
+88-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:76:13-69
+89        <receiver
+89-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:79:9-86:20
+90            android:name="hu.zsirkreta.app.bg.Alarms$Boot"
+90-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:80:13-43
+91            android:exported="true" >
+91-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:81:13-36
+92            <intent-filter>
+92-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:82:13-85:29
+93                <action android:name="android.intent.action.BOOT_COMPLETED" />
+93-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:83:17-79
+93-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:83:25-76
+94                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+94-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:84:17-84
+94-->/media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:84:25-81
+95            </intent-filter>
+96        </receiver>
+97
+98        <provider
+98-->[androidx.emoji2:emoji2:1.3.0] /home/dani/.gradle/caches/9.6.0/transforms/f0fde37bef3551100a37befa27bee466/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+99            android:name="androidx.startup.InitializationProvider"
+99-->[androidx.emoji2:emoji2:1.3.0] /home/dani/.gradle/caches/9.6.0/transforms/f0fde37bef3551100a37befa27bee466/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+100            android:authorities="hu.zsirkreta.app.androidx-startup"
+100-->[androidx.emoji2:emoji2:1.3.0] /home/dani/.gradle/caches/9.6.0/transforms/f0fde37bef3551100a37befa27bee466/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+101            android:exported="false" >
+101-->[androidx.emoji2:emoji2:1.3.0] /home/dani/.gradle/caches/9.6.0/transforms/f0fde37bef3551100a37befa27bee466/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+102            <meta-data
+102-->[androidx.emoji2:emoji2:1.3.0] /home/dani/.gradle/caches/9.6.0/transforms/f0fde37bef3551100a37befa27bee466/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+103                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+103-->[androidx.emoji2:emoji2:1.3.0] /home/dani/.gradle/caches/9.6.0/transforms/f0fde37bef3551100a37befa27bee466/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+104                android:value="androidx.startup" />
+104-->[androidx.emoji2:emoji2:1.3.0] /home/dani/.gradle/caches/9.6.0/transforms/f0fde37bef3551100a37befa27bee466/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+105            <meta-data
+105-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/9aaf1e823bac1f4526dfc40fc3a70efe/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+106                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+106-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/9aaf1e823bac1f4526dfc40fc3a70efe/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+107                android:value="androidx.startup" />
+107-->[androidx.lifecycle:lifecycle-process:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/9aaf1e823bac1f4526dfc40fc3a70efe/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+108            <meta-data
+108-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
+109                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+109-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
+110                android:value="androidx.startup" />
+110-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
+111        </provider> <!-- 'android:authorities' must be unique in the device, across all apps -->
+112        <provider
+112-->[io.sentry:sentry-android-core:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/532c0758fa50d1f61c4c636b3d0fb7ac/transformed/sentry-android-core-8.63.0/AndroidManifest.xml:12:9-15:40
+113            android:name="io.sentry.android.core.SentryInitProvider"
+113-->[io.sentry:sentry-android-core:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/532c0758fa50d1f61c4c636b3d0fb7ac/transformed/sentry-android-core-8.63.0/AndroidManifest.xml:13:13-69
+114            android:authorities="hu.zsirkreta.app.SentryInitProvider"
+114-->[io.sentry:sentry-android-core:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/532c0758fa50d1f61c4c636b3d0fb7ac/transformed/sentry-android-core-8.63.0/AndroidManifest.xml:14:13-70
+115            android:exported="false" />
+115-->[io.sentry:sentry-android-core:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/532c0758fa50d1f61c4c636b3d0fb7ac/transformed/sentry-android-core-8.63.0/AndroidManifest.xml:15:13-37
+116        <provider
+116-->[io.sentry:sentry-android-core:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/532c0758fa50d1f61c4c636b3d0fb7ac/transformed/sentry-android-core-8.63.0/AndroidManifest.xml:16:9-20:39
+117            android:name="io.sentry.android.core.SentryPerformanceProvider"
+117-->[io.sentry:sentry-android-core:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/532c0758fa50d1f61c4c636b3d0fb7ac/transformed/sentry-android-core-8.63.0/AndroidManifest.xml:17:13-76
+118            android:authorities="hu.zsirkreta.app.SentryPerformanceProvider"
+118-->[io.sentry:sentry-android-core:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/532c0758fa50d1f61c4c636b3d0fb7ac/transformed/sentry-android-core-8.63.0/AndroidManifest.xml:18:13-77
+119            android:exported="false"
+119-->[io.sentry:sentry-android-core:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/532c0758fa50d1f61c4c636b3d0fb7ac/transformed/sentry-android-core-8.63.0/AndroidManifest.xml:19:13-37
+120            android:initOrder="200" />
+120-->[io.sentry:sentry-android-core:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/532c0758fa50d1f61c4c636b3d0fb7ac/transformed/sentry-android-core-8.63.0/AndroidManifest.xml:20:13-36
+121
+122        <receiver
+122-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
+123            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+123-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
+124            android:directBootAware="false"
+124-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
+125            android:enabled="true"
+125-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
+126            android:exported="true"
+126-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
+127            android:permission="android.permission.DUMP" >
+127-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
+128            <intent-filter>
+128-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
+129                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+129-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
+129-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
+130            </intent-filter>
+131            <intent-filter>
+131-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
+132                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+132-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
+132-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
+133            </intent-filter>
+134            <intent-filter>
+134-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
+135                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+135-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
+135-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
+136            </intent-filter>
+137            <intent-filter>
+137-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
+138                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+138-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
+138-->[androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
+139            </intent-filter>
+140        </receiver>
+141        <!--
+142         Must run before the managed runtime provider emitted by dotnet/android
+143         so that sentry-native is already in the signal chain when the runtime
+144         installs its own handlers. 
+145         initOrder must stay higher than AppInitOrder-1 (1999999999) used by the .NET runtime:
+146         https://github.com/dotnet/android/blob/3c50ff4573b5/src/Xamarin.Android.Build.Tasks/Utilities/ManifestDocument.cs#L724
+147        -->
+148        <provider
+148-->[io.sentry:sentry-native-ndk:0.17.6] /home/dani/.gradle/caches/9.6.0/transforms/6c680e5a6e995089e517a930b32b09d2/transformed/sentry-native-ndk-0.17.6/AndroidManifest.xml:16:9-20:46
+149            android:name="io.sentry.ndk.SentryNdkPreloadProvider"
+149-->[io.sentry:sentry-native-ndk:0.17.6] /home/dani/.gradle/caches/9.6.0/transforms/6c680e5a6e995089e517a930b32b09d2/transformed/sentry-native-ndk-0.17.6/AndroidManifest.xml:17:13-66
+150            android:authorities="hu.zsirkreta.app.SentryNdkPreloadProvider"
+150-->[io.sentry:sentry-native-ndk:0.17.6] /home/dani/.gradle/caches/9.6.0/transforms/6c680e5a6e995089e517a930b32b09d2/transformed/sentry-native-ndk-0.17.6/AndroidManifest.xml:18:13-76
+151            android:exported="false"
+151-->[io.sentry:sentry-native-ndk:0.17.6] /home/dani/.gradle/caches/9.6.0/transforms/6c680e5a6e995089e517a930b32b09d2/transformed/sentry-native-ndk-0.17.6/AndroidManifest.xml:19:13-37
+152            android:initOrder="2000000000" />
+152-->[io.sentry:sentry-native-ndk:0.17.6] /home/dani/.gradle/caches/9.6.0/transforms/6c680e5a6e995089e517a930b32b09d2/transformed/sentry-native-ndk-0.17.6/AndroidManifest.xml:20:13-43
+153    </application>
+154
+155</manifest>

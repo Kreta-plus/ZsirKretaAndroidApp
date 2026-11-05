@@ -1,0 +1,11 @@
+<resources>
+    <!-- A tényleges színeket futásidőben a ui.Theme állítja (a felhasználó témája szerint);
+         ez az alap csak a Material-komponensek (BottomSheet, dátumválasztó) működéséhez kell. -->
+    <style name="Theme.ZsirKreta" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/kp_window_bg</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="colorPrimary">#ffe14d</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+</resources>

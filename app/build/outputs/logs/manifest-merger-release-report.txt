@@ -1,0 +1,458 @@
+-- Merging decision tree log ---
+meta-data#io.sentry.environment
+INJECTED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:32:9-34:52
+	android:value
+		INJECTED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:34:13-49
+	android:name
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:33:13-49
+provider#androidx.core.content.FileProvider
+INJECTED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:58:9-66:20
+	android:grantUriPermissions
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:62:13-47
+	android:authorities
+		INJECTED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:60:13-57
+	android:exported
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:61:13-37
+	android:name
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:59:13-62
+manifest
+ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:2:1-88:12
+INJECTED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:2:1-88:12
+INJECTED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:2:1-88:12
+INJECTED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:2:1-88:12
+MERGED from [com.google.android.material:material:1.14.0] /home/dani/.gradle/caches/9.6.0/transforms/6ebdaeabaa6754e6837dbc910da23479/transformed/material-1.14.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.8.0] /home/dani/.gradle/caches/9.6.0/transforms/d6e4d964fb30c6f00a7564c7ca05b729/transformed/appcompat-resources-1.8.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] /home/dani/.gradle/caches/9.6.0/transforms/c16861ee1c731316dc4cab2d729359a7/transformed/constraintlayout-2.2.1/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.appcompat:appcompat:1.8.0] /home/dani/.gradle/caches/9.6.0/transforms/42c07146ccad68a3f9429d405e592656/transformed/appcompat-1.8.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/dani/.gradle/caches/9.6.0/transforms/ca6bb331860f18f6fcb45e49fe8f9635/transformed/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.5.4] /home/dani/.gradle/caches/9.6.0/transforms/a83629d7a38c6434f96b7509603af39c/transformed/fragment-1.5.4/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.8.0] /home/dani/.gradle/caches/9.6.0/transforms/f68d28ae4e83145bac6c4a4008f8a4e6/transformed/activity-1.8.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.2.0] /home/dani/.gradle/caches/9.6.0/transforms/934730bd87d261b8c3a421ee8a7b193a/transformed/swiperefreshlayout-1.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /home/dani/.gradle/caches/9.6.0/transforms/84b86772125fe6ce7bfed82593588c10/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/dani/.gradle/caches/9.6.0/transforms/f0fde37bef3551100a37befa27bee466/transformed/emoji2-1.3.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/dani/.gradle/caches/9.6.0/transforms/f238fef32539f5096e1284b7a8be28ac/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/dani/.gradle/caches/9.6.0/transforms/5d62553ab1896a0af05331d3745a0634/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] /home/dani/.gradle/caches/9.6.0/transforms/70e8ab13b0a7223a7ada200229003d0c/transformed/recyclerview-1.2.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/dani/.gradle/caches/9.6.0/transforms/9578fdc38178bd7bc1ebf291f41ca2dc/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.2.0] /home/dani/.gradle/caches/9.6.0/transforms/dd51b19a8621f93d5236289d9a7cc544/transformed/customview-1.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.transition:transition:1.5.0] /home/dani/.gradle/caches/9.6.0/transforms/1d65efec083bd2b84525ecb180c2cdb6/transformed/transition-1.5.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.1.0] /home/dani/.gradle/caches/9.6.0/transforms/d0c4e0cf3c418c7c8dc10fde038ee522/transformed/dynamicanimation-1.1.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/dani/.gradle/caches/9.6.0/transforms/b2f6ace721b497d5483605ef485aa663/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/dani/.gradle/caches/9.6.0/transforms/a395fbccdde4a004c20454f93b6dc7de/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [io.sentry:sentry-android:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/478e886ffdb6c2663ae1c93b11821233/transformed/sentry-android-8.63.0/AndroidManifest.xml:2:1-10:12
+MERGED from [io.sentry:sentry-android-ndk:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/426c09f0081a3b5faf84be27c9281269/transformed/sentry-android-ndk-8.63.0/AndroidManifest.xml:2:1-7:12
+MERGED from [io.sentry:sentry-android-core:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/532c0758fa50d1f61c4c636b3d0fb7ac/transformed/sentry-android-core-8.63.0/AndroidManifest.xml:2:1-23:12
+MERGED from [androidx.loader:loader:1.0.0] /home/dani/.gradle/caches/9.6.0/transforms/5ccba91ae393328445290ee347286f9c/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.graphics:graphics-shapes-android:1.0.1] /home/dani/.gradle/caches/9.6.0/transforms/20ce9d67b8e52f60a9207b3c3e8cd587/transformed/graphics-shapes-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core-ktx:1.16.0] /home/dani/.gradle/caches/9.6.0/transforms/8d7113ef15d5886bda8e82b72a2dadc3/transformed/core-ktx-1.16.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core:1.16.0] /home/dani/.gradle/caches/9.6.0/transforms/e4f6b23d1385bb5e3a18c650f483fb9f/transformed/core-1.16.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/db874d511d1836556f38804a65aaedf7/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/9aaf1e823bac1f4526dfc40fc3a70efe/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/cfdd24fdbdb540fe709240a1cd9ab13b/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/8d694e5a9ca9cf65a54aa49695e6be5f/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/1395b19128299b8acb6e9b64f46e4e0b/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/05463bf99cc79911382ea5bc67ac5531/transformed/lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/dani/.gradle/caches/9.6.0/transforms/ff04a5fcbb669937f95f7d348a62e01a/transformed/savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/dani/.gradle/caches/9.6.0/transforms/98962b41c6cb10d60cf083d721728d74/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.cardview:cardview:1.0.0] /home/dani/.gradle/caches/9.6.0/transforms/8c8a7afed2a17c732e92efd6cafffdfe/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/dani/.gradle/caches/9.6.0/transforms/44aa66f9c32f3983178d66405cb2f4b4/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/dani/.gradle/caches/9.6.0/transforms/c526662a6da17510bd383fddd43c1a0d/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/dani/.gradle/caches/9.6.0/transforms/4cb7944625dcd5c9a617a8aec8e3169d/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/dani/.gradle/caches/9.6.0/transforms/9e888749fe845fe8a3773fd6f238cde5/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.2.0] /home/dani/.gradle/caches/9.6.0/transforms/9d80bdef4e106056e57bc95dbef4bd41/transformed/tracing-1.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /home/dani/.gradle/caches/9.6.0/transforms/0d8afe424ccf13e314b83e37fc1c6361/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core-viewtree:1.0.0] /home/dani/.gradle/caches/9.6.0/transforms/015b3b1f6e66e3003b7da214cbfa92a6/transformed/core-viewtree-1.0.0/AndroidManifest.xml:2:1-7:12
+MERGED from [io.sentry:sentry-android-replay:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/de2a4e6967057c243179b747eff3d343/transformed/sentry-android-replay-8.63.0/AndroidManifest.xml:2:1-7:12
+MERGED from [io.sentry:sentry-native-ndk:0.17.6] /home/dani/.gradle/caches/9.6.0/transforms/6c680e5a6e995089e517a930b32b09d2/transformed/sentry-native-ndk-0.17.6/AndroidManifest.xml:2:1-23:12
+	package
+		INJECTED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:4:5-67
+MERGED from [io.sentry:sentry-android-core:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/532c0758fa50d1f61c4c636b3d0fb7ac/transformed/sentry-android-core-8.63.0/AndroidManifest.xml:7:5-67
+MERGED from [io.sentry:sentry-android-core:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/532c0758fa50d1f61c4c636b3d0fb7ac/transformed/sentry-android-core-8.63.0/AndroidManifest.xml:7:5-67
+	android:name
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:4:22-64
+uses-permission#android.permission.REQUEST_INSTALL_PACKAGES
+ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:6:5-83
+	android:name
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:6:22-80
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:8:5-77
+	android:name
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:8:22-74
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:9:22-78
+uses-permission#android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
+ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:10:5-95
+	android:name
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:10:22-92
+uses-permission#android.permission.SCHEDULE_EXACT_ALARM
+ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:11:5-106
+	android:maxSdkVersion
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:11:77-103
+	android:name
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:11:22-76
+uses-permission#android.permission.USE_EXACT_ALARM
+ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:12:5-74
+	android:name
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:12:22-71
+application
+ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:14:5-87:19
+INJECTED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:14:5-87:19
+MERGED from [com.google.android.material:material:1.14.0] /home/dani/.gradle/caches/9.6.0/transforms/6ebdaeabaa6754e6837dbc910da23479/transformed/material-1.14.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.14.0] /home/dani/.gradle/caches/9.6.0/transforms/6ebdaeabaa6754e6837dbc910da23479/transformed/material-1.14.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] /home/dani/.gradle/caches/9.6.0/transforms/c16861ee1c731316dc4cab2d729359a7/transformed/constraintlayout-2.2.1/AndroidManifest.xml:7:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] /home/dani/.gradle/caches/9.6.0/transforms/c16861ee1c731316dc4cab2d729359a7/transformed/constraintlayout-2.2.1/AndroidManifest.xml:7:5-20
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/dani/.gradle/caches/9.6.0/transforms/f0fde37bef3551100a37befa27bee466/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/dani/.gradle/caches/9.6.0/transforms/f0fde37bef3551100a37befa27bee466/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
+MERGED from [io.sentry:sentry-android-core:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/532c0758fa50d1f61c4c636b3d0fb7ac/transformed/sentry-android-core-8.63.0/AndroidManifest.xml:9:5-21:19
+MERGED from [io.sentry:sentry-android-core:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/532c0758fa50d1f61c4c636b3d0fb7ac/transformed/sentry-android-core-8.63.0/AndroidManifest.xml:9:5-21:19
+MERGED from [androidx.core:core:1.16.0] /home/dani/.gradle/caches/9.6.0/transforms/e4f6b23d1385bb5e3a18c650f483fb9f/transformed/core-1.16.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.16.0] /home/dani/.gradle/caches/9.6.0/transforms/e4f6b23d1385bb5e3a18c650f483fb9f/transformed/core-1.16.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/9aaf1e823bac1f4526dfc40fc3a70efe/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/9aaf1e823bac1f4526dfc40fc3a70efe/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/dani/.gradle/caches/9.6.0/transforms/c526662a6da17510bd383fddd43c1a0d/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/dani/.gradle/caches/9.6.0/transforms/c526662a6da17510bd383fddd43c1a0d/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/dani/.gradle/caches/9.6.0/transforms/9e888749fe845fe8a3773fd6f238cde5/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/dani/.gradle/caches/9.6.0/transforms/9e888749fe845fe8a3773fd6f238cde5/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [io.sentry:sentry-native-ndk:0.17.6] /home/dani/.gradle/caches/9.6.0/transforms/6c680e5a6e995089e517a930b32b09d2/transformed/sentry-native-ndk-0.17.6/AndroidManifest.xml:7:5-21:19
+MERGED from [io.sentry:sentry-native-ndk:0.17.6] /home/dani/.gradle/caches/9.6.0/transforms/6c680e5a6e995089e517a930b32b09d2/transformed/sentry-native-ndk-0.17.6/AndroidManifest.xml:7:5-21:19
+	android:extractNativeLibs
+		INJECTED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.16.0] /home/dani/.gradle/caches/9.6.0/transforms/e4f6b23d1385bb5e3a18c650f483fb9f/transformed/core-1.16.0/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:20:9-36
+	android:label
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:19:9-41
+	android:roundIcon
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:18:9-54
+	android:icon
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:17:9-43
+	android:allowBackup
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:16:9-36
+	android:theme
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:21:9-47
+	android:enableOnBackInvokedCallback
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:23:9-51
+	android:usesCleartextTraffic
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:22:9-45
+	android:name
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:15:9-28
+meta-data#io.sentry.dsn
+ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:26:9-28:96
+	android:value
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:28:13-93
+	android:name
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:27:13-41
+meta-data#io.sentry.traces.sample-rate
+ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:29:9-31:36
+	android:value
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:31:13-33
+	android:name
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:30:13-56
+activity#hu.zsirkreta.app.MainActivity
+ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:36:9-46:20
+	android:launchMode
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:39:13-43
+	android:windowSoftInputMode
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:40:13-55
+	android:exported
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:38:13-36
+	android:configChanges
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:41:13-163
+	android:name
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:37:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:42:13-45:29
+action#android.intent.action.MAIN
+ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:43:17-69
+	android:name
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:43:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:44:17-77
+	android:name
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:44:27-74
+activity#hu.zsirkreta.app.ui.WebLoginActivity
+ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:48:9-51:116
+	android:exported
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:50:13-37
+	android:configChanges
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:51:13-113
+	android:name
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:49:13-48
+activity#hu.zsirkreta.app.ui.PackActivity
+ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:53:9-56:116
+	android:exported
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:55:13-37
+	android:configChanges
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:56:13-113
+	android:name
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:54:13-44
+receiver#hu.zsirkreta.app.bg.Alarms$Tick
+ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:68:9-70:40
+	android:exported
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:70:13-37
+	android:name
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:69:13-43
+service#hu.zsirkreta.app.bg.KeepAlive
+ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:73:9-76:72
+	android:exported
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:75:13-37
+	android:permission
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:76:13-69
+	android:name
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:74:13-41
+receiver#hu.zsirkreta.app.bg.Alarms$Boot
+ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:79:9-86:20
+	android:exported
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:81:13-36
+	android:name
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:80:13-43
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.MY_PACKAGE_REPLACED
+ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:82:13-85:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:83:17-79
+	android:name
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:83:25-76
+action#android.intent.action.MY_PACKAGE_REPLACED
+ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:84:17-84
+	android:name
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:84:25-81
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:63:13-65:54
+	android:resource
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:65:17-51
+	android:name
+		ADDED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml:64:17-67
+uses-sdk
+INJECTED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml
+INJECTED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml
+MERGED from [com.google.android.material:material:1.14.0] /home/dani/.gradle/caches/9.6.0/transforms/6ebdaeabaa6754e6837dbc910da23479/transformed/material-1.14.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.14.0] /home/dani/.gradle/caches/9.6.0/transforms/6ebdaeabaa6754e6837dbc910da23479/transformed/material-1.14.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.8.0] /home/dani/.gradle/caches/9.6.0/transforms/d6e4d964fb30c6f00a7564c7ca05b729/transformed/appcompat-resources-1.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.8.0] /home/dani/.gradle/caches/9.6.0/transforms/d6e4d964fb30c6f00a7564c7ca05b729/transformed/appcompat-resources-1.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] /home/dani/.gradle/caches/9.6.0/transforms/c16861ee1c731316dc4cab2d729359a7/transformed/constraintlayout-2.2.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] /home/dani/.gradle/caches/9.6.0/transforms/c16861ee1c731316dc4cab2d729359a7/transformed/constraintlayout-2.2.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.8.0] /home/dani/.gradle/caches/9.6.0/transforms/42c07146ccad68a3f9429d405e592656/transformed/appcompat-1.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.8.0] /home/dani/.gradle/caches/9.6.0/transforms/42c07146ccad68a3f9429d405e592656/transformed/appcompat-1.8.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/dani/.gradle/caches/9.6.0/transforms/ca6bb331860f18f6fcb45e49fe8f9635/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/dani/.gradle/caches/9.6.0/transforms/ca6bb331860f18f6fcb45e49fe8f9635/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.4] /home/dani/.gradle/caches/9.6.0/transforms/a83629d7a38c6434f96b7509603af39c/transformed/fragment-1.5.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.4] /home/dani/.gradle/caches/9.6.0/transforms/a83629d7a38c6434f96b7509603af39c/transformed/fragment-1.5.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.8.0] /home/dani/.gradle/caches/9.6.0/transforms/f68d28ae4e83145bac6c4a4008f8a4e6/transformed/activity-1.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.0] /home/dani/.gradle/caches/9.6.0/transforms/f68d28ae4e83145bac6c4a4008f8a4e6/transformed/activity-1.8.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.2.0] /home/dani/.gradle/caches/9.6.0/transforms/934730bd87d261b8c3a421ee8a7b193a/transformed/swiperefreshlayout-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.2.0] /home/dani/.gradle/caches/9.6.0/transforms/934730bd87d261b8c3a421ee8a7b193a/transformed/swiperefreshlayout-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /home/dani/.gradle/caches/9.6.0/transforms/84b86772125fe6ce7bfed82593588c10/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] /home/dani/.gradle/caches/9.6.0/transforms/84b86772125fe6ce7bfed82593588c10/transformed/emoji2-views-helper-1.3.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/dani/.gradle/caches/9.6.0/transforms/f0fde37bef3551100a37befa27bee466/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] /home/dani/.gradle/caches/9.6.0/transforms/f0fde37bef3551100a37befa27bee466/transformed/emoji2-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/dani/.gradle/caches/9.6.0/transforms/f238fef32539f5096e1284b7a8be28ac/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /home/dani/.gradle/caches/9.6.0/transforms/f238fef32539f5096e1284b7a8be28ac/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/dani/.gradle/caches/9.6.0/transforms/5d62553ab1896a0af05331d3745a0634/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/dani/.gradle/caches/9.6.0/transforms/5d62553ab1896a0af05331d3745a0634/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] /home/dani/.gradle/caches/9.6.0/transforms/70e8ab13b0a7223a7ada200229003d0c/transformed/recyclerview-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] /home/dani/.gradle/caches/9.6.0/transforms/70e8ab13b0a7223a7ada200229003d0c/transformed/recyclerview-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/dani/.gradle/caches/9.6.0/transforms/9578fdc38178bd7bc1ebf291f41ca2dc/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/dani/.gradle/caches/9.6.0/transforms/9578fdc38178bd7bc1ebf291f41ca2dc/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.2.0] /home/dani/.gradle/caches/9.6.0/transforms/dd51b19a8621f93d5236289d9a7cc544/transformed/customview-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.customview:customview:1.2.0] /home/dani/.gradle/caches/9.6.0/transforms/dd51b19a8621f93d5236289d9a7cc544/transformed/customview-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.transition:transition:1.5.0] /home/dani/.gradle/caches/9.6.0/transforms/1d65efec083bd2b84525ecb180c2cdb6/transformed/transition-1.5.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.transition:transition:1.5.0] /home/dani/.gradle/caches/9.6.0/transforms/1d65efec083bd2b84525ecb180c2cdb6/transformed/transition-1.5.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.1.0] /home/dani/.gradle/caches/9.6.0/transforms/d0c4e0cf3c418c7c8dc10fde038ee522/transformed/dynamicanimation-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.1.0] /home/dani/.gradle/caches/9.6.0/transforms/d0c4e0cf3c418c7c8dc10fde038ee522/transformed/dynamicanimation-1.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/dani/.gradle/caches/9.6.0/transforms/b2f6ace721b497d5483605ef485aa663/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/dani/.gradle/caches/9.6.0/transforms/b2f6ace721b497d5483605ef485aa663/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/dani/.gradle/caches/9.6.0/transforms/a395fbccdde4a004c20454f93b6dc7de/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/dani/.gradle/caches/9.6.0/transforms/a395fbccdde4a004c20454f93b6dc7de/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [io.sentry:sentry-android:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/478e886ffdb6c2663ae1c93b11821233/transformed/sentry-android-8.63.0/AndroidManifest.xml:6:5-8:57
+MERGED from [io.sentry:sentry-android:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/478e886ffdb6c2663ae1c93b11821233/transformed/sentry-android-8.63.0/AndroidManifest.xml:6:5-8:57
+MERGED from [io.sentry:sentry-android-ndk:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/426c09f0081a3b5faf84be27c9281269/transformed/sentry-android-ndk-8.63.0/AndroidManifest.xml:5:5-44
+MERGED from [io.sentry:sentry-android-ndk:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/426c09f0081a3b5faf84be27c9281269/transformed/sentry-android-ndk-8.63.0/AndroidManifest.xml:5:5-44
+MERGED from [io.sentry:sentry-android-core:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/532c0758fa50d1f61c4c636b3d0fb7ac/transformed/sentry-android-core-8.63.0/AndroidManifest.xml:5:5-44
+MERGED from [io.sentry:sentry-android-core:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/532c0758fa50d1f61c4c636b3d0fb7ac/transformed/sentry-android-core-8.63.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/dani/.gradle/caches/9.6.0/transforms/5ccba91ae393328445290ee347286f9c/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/dani/.gradle/caches/9.6.0/transforms/5ccba91ae393328445290ee347286f9c/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.graphics:graphics-shapes-android:1.0.1] /home/dani/.gradle/caches/9.6.0/transforms/20ce9d67b8e52f60a9207b3c3e8cd587/transformed/graphics-shapes-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.graphics:graphics-shapes-android:1.0.1] /home/dani/.gradle/caches/9.6.0/transforms/20ce9d67b8e52f60a9207b3c3e8cd587/transformed/graphics-shapes-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.16.0] /home/dani/.gradle/caches/9.6.0/transforms/8d7113ef15d5886bda8e82b72a2dadc3/transformed/core-ktx-1.16.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.16.0] /home/dani/.gradle/caches/9.6.0/transforms/8d7113ef15d5886bda8e82b72a2dadc3/transformed/core-ktx-1.16.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core:1.16.0] /home/dani/.gradle/caches/9.6.0/transforms/e4f6b23d1385bb5e3a18c650f483fb9f/transformed/core-1.16.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.16.0] /home/dani/.gradle/caches/9.6.0/transforms/e4f6b23d1385bb5e3a18c650f483fb9f/transformed/core-1.16.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/db874d511d1836556f38804a65aaedf7/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/db874d511d1836556f38804a65aaedf7/transformed/lifecycle-viewmodel-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/9aaf1e823bac1f4526dfc40fc3a70efe/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/9aaf1e823bac1f4526dfc40fc3a70efe/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/cfdd24fdbdb540fe709240a1cd9ab13b/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/cfdd24fdbdb540fe709240a1cd9ab13b/transformed/lifecycle-livedata-core-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/8d694e5a9ca9cf65a54aa49695e6be5f/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/8d694e5a9ca9cf65a54aa49695e6be5f/transformed/lifecycle-livedata-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/1395b19128299b8acb6e9b64f46e4e0b/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/1395b19128299b8acb6e9b64f46e4e0b/transformed/lifecycle-runtime-2.6.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/05463bf99cc79911382ea5bc67ac5531/transformed/lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/05463bf99cc79911382ea5bc67ac5531/transformed/lifecycle-viewmodel-savedstate-2.6.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/dani/.gradle/caches/9.6.0/transforms/ff04a5fcbb669937f95f7d348a62e01a/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /home/dani/.gradle/caches/9.6.0/transforms/ff04a5fcbb669937f95f7d348a62e01a/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/dani/.gradle/caches/9.6.0/transforms/98962b41c6cb10d60cf083d721728d74/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/dani/.gradle/caches/9.6.0/transforms/98962b41c6cb10d60cf083d721728d74/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/dani/.gradle/caches/9.6.0/transforms/8c8a7afed2a17c732e92efd6cafffdfe/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/dani/.gradle/caches/9.6.0/transforms/8c8a7afed2a17c732e92efd6cafffdfe/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/dani/.gradle/caches/9.6.0/transforms/44aa66f9c32f3983178d66405cb2f4b4/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/dani/.gradle/caches/9.6.0/transforms/44aa66f9c32f3983178d66405cb2f4b4/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/dani/.gradle/caches/9.6.0/transforms/c526662a6da17510bd383fddd43c1a0d/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/dani/.gradle/caches/9.6.0/transforms/c526662a6da17510bd383fddd43c1a0d/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/dani/.gradle/caches/9.6.0/transforms/4cb7944625dcd5c9a617a8aec8e3169d/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /home/dani/.gradle/caches/9.6.0/transforms/4cb7944625dcd5c9a617a8aec8e3169d/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/dani/.gradle/caches/9.6.0/transforms/9e888749fe845fe8a3773fd6f238cde5/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/dani/.gradle/caches/9.6.0/transforms/9e888749fe845fe8a3773fd6f238cde5/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.2.0] /home/dani/.gradle/caches/9.6.0/transforms/9d80bdef4e106056e57bc95dbef4bd41/transformed/tracing-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.2.0] /home/dani/.gradle/caches/9.6.0/transforms/9d80bdef4e106056e57bc95dbef4bd41/transformed/tracing-1.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /home/dani/.gradle/caches/9.6.0/transforms/0d8afe424ccf13e314b83e37fc1c6361/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] /home/dani/.gradle/caches/9.6.0/transforms/0d8afe424ccf13e314b83e37fc1c6361/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] /home/dani/.gradle/caches/9.6.0/transforms/015b3b1f6e66e3003b7da214cbfa92a6/transformed/core-viewtree-1.0.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] /home/dani/.gradle/caches/9.6.0/transforms/015b3b1f6e66e3003b7da214cbfa92a6/transformed/core-viewtree-1.0.0/AndroidManifest.xml:5:5-44
+MERGED from [io.sentry:sentry-android-replay:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/de2a4e6967057c243179b747eff3d343/transformed/sentry-android-replay-8.63.0/AndroidManifest.xml:5:5-44
+MERGED from [io.sentry:sentry-android-replay:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/de2a4e6967057c243179b747eff3d343/transformed/sentry-android-replay-8.63.0/AndroidManifest.xml:5:5-44
+MERGED from [io.sentry:sentry-native-ndk:0.17.6] /home/dani/.gradle/caches/9.6.0/transforms/6c680e5a6e995089e517a930b32b09d2/transformed/sentry-native-ndk-0.17.6/AndroidManifest.xml:5:5-44
+MERGED from [io.sentry:sentry-native-ndk:0.17.6] /home/dani/.gradle/caches/9.6.0/transforms/6c680e5a6e995089e517a930b32b09d2/transformed/sentry-native-ndk-0.17.6/AndroidManifest.xml:5:5-44
+	tools:overrideLibrary
+		ADDED from [io.sentry:sentry-android:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/478e886ffdb6c2663ae1c93b11821233/transformed/sentry-android-8.63.0/AndroidManifest.xml:8:9-54
+	android:targetSdkVersion
+		INJECTED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/AndroidManifest.xml
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.3.0] /home/dani/.gradle/caches/9.6.0/transforms/f0fde37bef3551100a37befa27bee466/transformed/emoji2-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/9aaf1e823bac1f4526dfc40fc3a70efe/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/9aaf1e823bac1f4526dfc40fc3a70efe/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/dani/.gradle/caches/9.6.0/transforms/9e888749fe845fe8a3773fd6f238cde5/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /home/dani/.gradle/caches/9.6.0/transforms/9e888749fe845fe8a3773fd6f238cde5/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/dani/.gradle/caches/9.6.0/transforms/f0fde37bef3551100a37befa27bee466/transformed/emoji2-1.3.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/dani/.gradle/caches/9.6.0/transforms/f0fde37bef3551100a37befa27bee466/transformed/emoji2-1.3.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/dani/.gradle/caches/9.6.0/transforms/f0fde37bef3551100a37befa27bee466/transformed/emoji2-1.3.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/dani/.gradle/caches/9.6.0/transforms/f0fde37bef3551100a37befa27bee466/transformed/emoji2-1.3.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.3.0] /home/dani/.gradle/caches/9.6.0/transforms/f0fde37bef3551100a37befa27bee466/transformed/emoji2-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/dani/.gradle/caches/9.6.0/transforms/f0fde37bef3551100a37befa27bee466/transformed/emoji2-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.3.0] /home/dani/.gradle/caches/9.6.0/transforms/f0fde37bef3551100a37befa27bee466/transformed/emoji2-1.3.0/AndroidManifest.xml:30:17-75
+provider#io.sentry.android.core.SentryInitProvider
+ADDED from [io.sentry:sentry-android-core:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/532c0758fa50d1f61c4c636b3d0fb7ac/transformed/sentry-android-core-8.63.0/AndroidManifest.xml:12:9-15:40
+	android:authorities
+		ADDED from [io.sentry:sentry-android-core:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/532c0758fa50d1f61c4c636b3d0fb7ac/transformed/sentry-android-core-8.63.0/AndroidManifest.xml:14:13-70
+	android:exported
+		ADDED from [io.sentry:sentry-android-core:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/532c0758fa50d1f61c4c636b3d0fb7ac/transformed/sentry-android-core-8.63.0/AndroidManifest.xml:15:13-37
+	android:name
+		ADDED from [io.sentry:sentry-android-core:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/532c0758fa50d1f61c4c636b3d0fb7ac/transformed/sentry-android-core-8.63.0/AndroidManifest.xml:13:13-69
+provider#io.sentry.android.core.SentryPerformanceProvider
+ADDED from [io.sentry:sentry-android-core:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/532c0758fa50d1f61c4c636b3d0fb7ac/transformed/sentry-android-core-8.63.0/AndroidManifest.xml:16:9-20:39
+	android:authorities
+		ADDED from [io.sentry:sentry-android-core:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/532c0758fa50d1f61c4c636b3d0fb7ac/transformed/sentry-android-core-8.63.0/AndroidManifest.xml:18:13-77
+	android:exported
+		ADDED from [io.sentry:sentry-android-core:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/532c0758fa50d1f61c4c636b3d0fb7ac/transformed/sentry-android-core-8.63.0/AndroidManifest.xml:19:13-37
+	android:initOrder
+		ADDED from [io.sentry:sentry-android-core:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/532c0758fa50d1f61c4c636b3d0fb7ac/transformed/sentry-android-core-8.63.0/AndroidManifest.xml:20:13-36
+	android:name
+		ADDED from [io.sentry:sentry-android-core:8.63.0] /home/dani/.gradle/caches/9.6.0/transforms/532c0758fa50d1f61c4c636b3d0fb7ac/transformed/sentry-android-core-8.63.0/AndroidManifest.xml:17:13-76
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.16.0] /home/dani/.gradle/caches/9.6.0/transforms/e4f6b23d1385bb5e3a18c650f483fb9f/transformed/core-1.16.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.16.0] /home/dani/.gradle/caches/9.6.0/transforms/e4f6b23d1385bb5e3a18c650f483fb9f/transformed/core-1.16.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.16.0] /home/dani/.gradle/caches/9.6.0/transforms/e4f6b23d1385bb5e3a18c650f483fb9f/transformed/core-1.16.0/AndroidManifest.xml:23:9-81
+permission#hu.zsirkreta.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.16.0] /home/dani/.gradle/caches/9.6.0/transforms/e4f6b23d1385bb5e3a18c650f483fb9f/transformed/core-1.16.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.16.0] /home/dani/.gradle/caches/9.6.0/transforms/e4f6b23d1385bb5e3a18c650f483fb9f/transformed/core-1.16.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.16.0] /home/dani/.gradle/caches/9.6.0/transforms/e4f6b23d1385bb5e3a18c650f483fb9f/transformed/core-1.16.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.16.0] /home/dani/.gradle/caches/9.6.0/transforms/e4f6b23d1385bb5e3a18c650f483fb9f/transformed/core-1.16.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.16.0] /home/dani/.gradle/caches/9.6.0/transforms/e4f6b23d1385bb5e3a18c650f483fb9f/transformed/core-1.16.0/AndroidManifest.xml:26:22-94
+uses-permission#hu.zsirkreta.app.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.16.0] /home/dani/.gradle/caches/9.6.0/transforms/e4f6b23d1385bb5e3a18c650f483fb9f/transformed/core-1.16.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.16.0] /home/dani/.gradle/caches/9.6.0/transforms/e4f6b23d1385bb5e3a18c650f483fb9f/transformed/core-1.16.0/AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/9aaf1e823bac1f4526dfc40fc3a70efe/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/9aaf1e823bac1f4526dfc40fc3a70efe/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] /home/dani/.gradle/caches/9.6.0/transforms/9aaf1e823bac1f4526dfc40fc3a70efe/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:30:17-78
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] /home/dani/.gradle/caches/9.6.0/transforms/5eeb9928c9239a684ada958fe0d3a8fd/transformed/profileinstaller-1.4.0/AndroidManifest.xml:50:25-92
+provider#io.sentry.ndk.SentryNdkPreloadProvider
+ADDED from [io.sentry:sentry-native-ndk:0.17.6] /home/dani/.gradle/caches/9.6.0/transforms/6c680e5a6e995089e517a930b32b09d2/transformed/sentry-native-ndk-0.17.6/AndroidManifest.xml:16:9-20:46
+	android:authorities
+		ADDED from [io.sentry:sentry-native-ndk:0.17.6] /home/dani/.gradle/caches/9.6.0/transforms/6c680e5a6e995089e517a930b32b09d2/transformed/sentry-native-ndk-0.17.6/AndroidManifest.xml:18:13-76
+	android:exported
+		ADDED from [io.sentry:sentry-native-ndk:0.17.6] /home/dani/.gradle/caches/9.6.0/transforms/6c680e5a6e995089e517a930b32b09d2/transformed/sentry-native-ndk-0.17.6/AndroidManifest.xml:19:13-37
+	android:initOrder
+		ADDED from [io.sentry:sentry-native-ndk:0.17.6] /home/dani/.gradle/caches/9.6.0/transforms/6c680e5a6e995089e517a930b32b09d2/transformed/sentry-native-ndk-0.17.6/AndroidManifest.xml:20:13-43
+	android:name
+		ADDED from [io.sentry:sentry-native-ndk:0.17.6] /home/dani/.gradle/caches/9.6.0/transforms/6c680e5a6e995089e517a930b32b09d2/transformed/sentry-native-ndk-0.17.6/AndroidManifest.xml:17:13-66
