@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- a KeepAlive háttérfeladat hálózatot vár (setRequiredNetworkType): Android 14-től enélkül a JobScheduler SecurityException-t dob -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!-- beépített frissítés: a letöltött új verzió átadása az Android telepítőjének -->
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <!-- értesítések és háttér-ellenőrzés -->
@@ -64,7 +66,7 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
-        <!-- háttér-ellenőrzés és esti emlékeztető (csak az AlarmManager hívja) -->
+        <!-- háttér-ellenőrzés, esti és óra előtti emlékeztető (csak az AlarmManager hívja) -->
         <receiver
             android:name=".bg.Alarms$Tick"
             android:exported="false" />
@@ -75,13 +77,15 @@
             android:exported="false"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
-        <!-- újraindítás / app-frissítés után az időzítés visszaállítása (csak védett rendszer-üzenetek) -->
+        <!-- újraindítás / app-frissítés / óraállítás után az időzítés visszaállítása (csak védett rendszer-üzenetek) -->
         <receiver
             android:name=".bg.Alarms$Boot"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
             </intent-filter>
         </receiver>
     </application>

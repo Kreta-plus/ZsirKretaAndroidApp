@@ -1,8 +1,0 @@
-hu.zsirkreta.app-pngs-0 /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/build/generated/res/pngs/debug
-hu.zsirkreta.app-updated_navigation_xml-1 /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/build/generated/updated_navigation_xml/debug
-hu.zsirkreta.app-packageDebugResources-2 /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/build/intermediates/incremental/debug/packageDebugResources/merged.dir
-hu.zsirkreta.app-packageDebugResources-3 /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir
-hu.zsirkreta.app-debug-4 /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/build/intermediates/merged_res/debug/mergeDebugResources
-hu.zsirkreta.app-debug-5 /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/debug/res
-hu.zsirkreta.app-main-6 /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/res
-gradleHome-0 /home/dani/.gradle

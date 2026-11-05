@@ -1,8 +1,0 @@
-lib/arm64-v8a/libsentry-android.so->io.sentry:sentry-native-ndk:0.17.6
-lib/arm64-v8a/libsentry.so->io.sentry:sentry-native-ndk:0.17.6
-lib/armeabi-v7a/libsentry-android.so->io.sentry:sentry-native-ndk:0.17.6
-lib/armeabi-v7a/libsentry.so->io.sentry:sentry-native-ndk:0.17.6
-lib/x86/libsentry-android.so->io.sentry:sentry-native-ndk:0.17.6
-lib/x86/libsentry.so->io.sentry:sentry-native-ndk:0.17.6
-lib/x86_64/libsentry-android.so->io.sentry:sentry-native-ndk:0.17.6
-lib/x86_64/libsentry.so->io.sentry:sentry-native-ndk:0.17.6

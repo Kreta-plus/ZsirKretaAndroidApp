@@ -4,7 +4,7 @@
             "outputFile": "hu.zsirkreta.app-mergeReleaseResources-39:/values-w360dp-port-v13/values-w360dp-port-v13.xml",
             "map": [
                 {
-                    "source": "/home/dani/.gradle/caches/9.6.0/transforms/6ebdaeabaa6754e6837dbc910da23479/transformed/material-1.14.0/res/values-w360dp-port-v13/values-w360dp-port-v13.xml",
+                    "source": "C:\\Users\\Benji\\.gradle\\caches\\9.6.0\\transforms\\6ebdaeabaa6754e6837dbc910da23479\\transformed\\material-1.14.0\\res\\values-w360dp-port-v13\\values-w360dp-port-v13.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

@@ -1,8 +1,8 @@
-hu.zsirkreta.app-pngs-0 /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/build/generated/res/pngs/release
-hu.zsirkreta.app-updated_navigation_xml-1 /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/build/generated/updated_navigation_xml/release
-hu.zsirkreta.app-packageReleaseResources-2 /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/build/intermediates/incremental/release/packageReleaseResources/merged.dir
-hu.zsirkreta.app-packageReleaseResources-3 /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/build/intermediates/incremental/release/packageReleaseResources/stripped.dir
-hu.zsirkreta.app-release-4 /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/build/intermediates/merged_res/release/mergeReleaseResources
-hu.zsirkreta.app-main-5 /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/main/res
-hu.zsirkreta.app-release-6 /media/dani/bdafd8b1-af81-4c85-bf82-a6623e10842b/Dokumentumok/projektek/zsirkreta/android/ZsirKretaAndroidAppWithCode/app/src/release/res
-gradleHome-0 /home/dani/.gradle
+hu.zsirkreta.app-pngs-0 C:\Zsirkreta\ZsirKretaAndroidApp\app\build\generated\res\pngs\release
+hu.zsirkreta.app-updated_navigation_xml-1 C:\Zsirkreta\ZsirKretaAndroidApp\app\build\generated\updated_navigation_xml\release
+hu.zsirkreta.app-packageReleaseResources-2 C:\Zsirkreta\ZsirKretaAndroidApp\app\build\intermediates\incremental\release\packageReleaseResources\merged.dir
+hu.zsirkreta.app-packageReleaseResources-3 C:\Zsirkreta\ZsirKretaAndroidApp\app\build\intermediates\incremental\release\packageReleaseResources\stripped.dir
+hu.zsirkreta.app-release-4 C:\Zsirkreta\ZsirKretaAndroidApp\app\build\intermediates\merged_res\release\mergeReleaseResources
+hu.zsirkreta.app-main-5 C:\Zsirkreta\ZsirKretaAndroidApp\app\src\main\res
+hu.zsirkreta.app-release-6 C:\Zsirkreta\ZsirKretaAndroidApp\app\src\release\res
+gradleHome-0 C:\Users\Benji\.gradle

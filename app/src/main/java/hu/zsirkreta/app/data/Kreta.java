@@ -236,6 +236,20 @@ public final class Kreta {
         return row == null ? null : wrap(row, false, true);
     }
 
+    /**
+     * Hálózat nélkül, a telefonon lévő adat: a tárolt KRÉTA-válasz (teszt fióknál a helyben generált adat). null, ha nincs.
+     * Az óra előtti emlékeztető ebből dolgozik, így az sosem kérdezi a KRÉTA-t.
+     */
+    public static Raw local(String what, Map<String, String> params) {
+        Store.Account a = Store.account();
+        if (a == null) return null;
+        if (a.demo) {
+            String body = Demo.data(a.ukey, what, clean(params)).toString();
+            return new Raw(parse(body), body, now(), false, true);
+        }
+        return cached(what, params);
+    }
+
     private static Map<String, String> clean(Map<String, String> params) {
         Map<String, String> p = new TreeMap<>();
         if (params != null) for (String k : new String[]{"datumTol", "datumIg"}) if (params.get(k) != null) p.put(k, params.get(k));

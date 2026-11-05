@@ -20,11 +20,16 @@
   </testSourceProviders>
   <testFixturesSourceProviders>
   </testFixturesSourceProviders>
+  <manifestPlaceholders>
+    <placeholder
+        name="sentryEnvironment"
+        value="production" />
+  </manifestPlaceholders>
   <artifact
       classOutputs="build\intermediates\javac\release\compileReleaseJavaWithJavac\classes;build\intermediates\built_in_kotlinc\release\compileReleaseKotlin\classes;build\intermediates\compile_r_class_jar\release\generateReleaseRFile\R.jar"
       type="MAIN"
       applicationId="hu.zsirkreta.app"
       generatedSourceFolders="build\generated\ap_generated_sources\release\out;build\generated\source\buildConfig\release"
-      desugaredMethodsFiles="C:\Users\Benji\.gradle\caches\9.6.0\transforms\de107807601a8853251e0b7cee90c176\transformed\D8BackportedDesugaredMethods.txt">
+      desugaredMethodsFiles="C:\Users\Benji\.gradle\caches\9.6.0\transforms\438dc69a8dc954a679a6606af53d7cbe\transformed\D8BackportedDesugaredMethods.txt">
   </artifact>
 </variant>

@@ -74,6 +74,18 @@ public final class Dt {
         return (int) (s / 86400) + " napja";
     }
 
+    /** Hány perc van még hátra a-tól b-ig, felfelé kerekítve (8:44:10-kor a 8:45-ös végig „1 perc”). */
+    public static long minutesUntil(LocalDateTime from, LocalDateTime to) {
+        long s = ChronoUnit.SECONDS.between(from, to);
+        return s <= 0 ? 0 : (s + 59) / 60;
+    }
+
+    /** „45 perc”, „1 óra 5 perc”, „2 óra” */
+    public static String duration(long min) {
+        if (min < 60) return min + " perc";
+        return (min / 60) + " óra" + (min % 60 == 0 ? "" : " " + (min % 60) + " perc");
+    }
+
     public static String relDay(LocalDate d) {
         long diff = days(today(), d);
         if (diff == 0) return "ma";

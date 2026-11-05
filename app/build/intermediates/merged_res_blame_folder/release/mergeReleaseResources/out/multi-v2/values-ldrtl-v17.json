@@ -4,7 +4,7 @@
             "outputFile": "hu.zsirkreta.app-mergeReleaseResources-39:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "/home/dani/.gradle/caches/9.6.0/transforms/6ebdaeabaa6754e6837dbc910da23479/transformed/material-1.14.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",
+                    "source": "C:\\Users\\Benji\\.gradle\\caches\\9.6.0\\transforms\\6ebdaeabaa6754e6837dbc910da23479\\transformed\\material-1.14.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

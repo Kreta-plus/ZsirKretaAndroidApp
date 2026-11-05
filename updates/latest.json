@@ -1,19 +1,28 @@
 {
-  "versionCode": 8,
-  "versionName": "2.4",
+  "versionCode": 9,
+  "versionName": "2.5",
   "date": "2026-11-05",
   "minSdk": 26,
-  "apk": "ZsirKreta-2.4.apk",
-  "size": 5639223,
-  "sha256": "d0045efff4cd291ddad9d27b420f5a620bf9854e5902d7010d53dc8eba71dce8",
+  "apk": "ZsirKreta-2.5.apk",
+  "size": 9752228,
+  "sha256": "ec86ec476e8f2ff604197da4d4a2bca56e091f5544bf851af2a365bba79f2b20",
   "signer": "b6e7b48b6df708d95c563a5db89dd73993c5e916fb5a03c2b9a40e0f09d64ee8",
   "notes": [
-    "Új: óra előtti emlékeztető – X perccel minden óra előtt, vagy csak a nap első órája előtt (Beállítások → Értesítések)",
-    "Új: az órarend és a kezdőlap a telefon órája szerint mutatja, melyik óra tart, mennyi van még hátra, és mennyi múlva kezdődik a következő",
-    "Új: a Beállítások csoportokba rendezve, mint a weben",
-    "Javítva: az órák nem ugrálnak frissítéskor, és nem villan fel a „Betöltés…” az órarendben"
+    "Új: a belépés akkor is megmarad, ha napokig nem nyitod meg az appot (a háttérben naponta kétszer megújítja a KRÉTA-belépést)",
+    "Javítva: a KRÉTA átmeneti hibáinál (szerverhiba, karbantartás) az app nem léptet ki, hanem később újrapróbálja",
+    "Új: automatikus hibajelentés, hogy a hibákat gyorsabban javíthassuk"
   ],
   "versions": [
+    {
+      "versionCode": 9,
+      "versionName": "2.5",
+      "date": "2026-11-05",
+      "notes": [
+        "Új: a belépés akkor is megmarad, ha napokig nem nyitod meg az appot (a háttérben naponta kétszer megújítja a KRÉTA-belépést)",
+        "Javítva: a KRÉTA átmeneti hibáinál (szerverhiba, karbantartás) az app nem léptet ki, hanem később újrapróbálja",
+        "Új: automatikus hibajelentés, hogy a hibákat gyorsabban javíthassuk"
+      ]
+    },
     {
       "versionCode": 8,
       "versionName": "2.4",

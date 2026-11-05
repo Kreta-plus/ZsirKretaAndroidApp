@@ -1,0 +1,18 @@
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build/
+/app/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+# a kiadott frissítések viszont kellenek a repóba (innen tölti le őket az app)
+!/updates/*.apk
+
+# aláíró kulcs és jelszavak: SOHA ne kerüljenek a repóba
+keystore.properties
+*.jks
+*.keystore

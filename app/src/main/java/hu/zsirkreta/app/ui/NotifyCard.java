@@ -13,12 +13,16 @@ import java.util.List;
 import hu.zsirkreta.app.MainActivity;
 import hu.zsirkreta.app.R;
 import hu.zsirkreta.app.bg.Alarms;
+import hu.zsirkreta.app.bg.LessonReminder;
 import hu.zsirkreta.app.bg.Notifs;
 import hu.zsirkreta.app.bg.Watcher;
 import hu.zsirkreta.app.util.Async;
 import hu.zsirkreta.app.util.Dt;
 
-/** Értesítések: a kezdőlapi „Kapcsold be” kártya, a Beállítások értesítés-része és a fejlesztői gyakoriság-választó. */
+/**
+ * Értesítések: a kezdőlapi „Kapcsold be” kártya, a Beállítások értesítés-része (háttér-értesítések és az óra előtti
+ * emlékeztető) és a fejlesztői gyakoriság-választó.
+ */
 final class NotifyCard {
     private NotifyCard() {}
 
@@ -76,7 +80,7 @@ final class NotifyCard {
 
     // ---------- Beállítások ----------
     static View settings(MainActivity act) {
-        LinearLayout card = Ui.card(act, "Értesítések", Notifs.enabled(act) ? (ready(act) ? "bekapcsolva" : "engedély kell") : "kikapcsolva");
+        LinearLayout card = Ui.card(act, "Változások a KRÉTA-ban", Notifs.enabled(act) ? (ready(act) ? "bekapcsolva" : "engedély kell") : "kikapcsolva");
         card.addView(Ui.switchRow(act, "Értesítések a háttérből", Notifs.enabled(act), on -> {
             Notifs.setEnabled(act, on);
             Alarms.reschedule(act);
@@ -115,6 +119,89 @@ final class NotifyCard {
             try { act.startActivity(Notifs.channelSettingsIntent(act)); } catch (Exception ignored) {}
         }), Ui.lp(Ui.WRAP, Ui.WRAP));
         return card;
+    }
+
+    // ---------- óra előtti emlékeztető ----------
+    private static final String[] MODE_KEYS = {LessonReminder.OFF, LessonReminder.FIRST, LessonReminder.ALL};
+    private static final String[] MODE_LABELS = {"Ki", "Csak az első", "Minden óra"};
+
+    private static void lessonChanged(MainActivity act) {
+        Async.run(() -> { LessonReminder.reschedule(act); return true; }, ok -> act.rerender(), e -> act.rerender());
+    }
+
+    static String minutesLabel(int m) { return m + " perccel"; }
+
+    /** Óra előtti emlékeztető: mikor (ki / csak az első óra előtt / minden óra előtt) és hány perccel előtte. */
+    static View lessons(MainActivity act) {
+        String mode = LessonReminder.mode(act);
+        boolean on = !LessonReminder.OFF.equals(mode);
+        LinearLayout card = Ui.card(act, "Óra előtti emlékeztető", on ? (Notifs.permitted(act) ? "bekapcsolva" : "engedély kell") : "kikapcsolva");
+        card.addView(Ui.small(act, "A telefon órája szerint szól, a telefonon tárolt órarendből. Ehhez nem kérdezi a KRÉTA-t, és elmaradó órára nem jelez."), Ui.lp(Ui.MATCH, Ui.WRAP));
+        card.addView(Ui.small(act, "Mikor szóljon?"), Ui.lp(Ui.MATCH, Ui.WRAP));
+        card.addView(Ui.seg(act, MODE_KEYS, MODE_LABELS, mode, k -> {
+            LessonReminder.setMode(act, k);
+            if (!LessonReminder.OFF.equals(k) && !Notifs.permitted(act)) act.askPermissions();
+            lessonChanged(act);
+        }), Ui.lp(Ui.MATCH, Ui.WRAP));
+        if (!on) return card;
+
+        int min = LessonReminder.minutes(act);
+        card.addView(Ui.small(act, LessonReminder.FIRST.equals(mode)
+                ? "Reggel, a nap első (megtartott) órája előtt " + min + " perccel – a napi órák számával és a dolgozatokkal."
+                : "Minden óra előtt " + min + " perccel, teremmel és tanárral."), Ui.lp(Ui.MATCH, Ui.WRAP));
+
+        // hány perccel előtte: előre megadott értékek, vagy egyéni
+        List<String> labels = new ArrayList<>();
+        int sel = -1;
+        for (int i = 0; i < LessonReminder.MINUTES.length; i++) {
+            int v = LessonReminder.MINUTES[i];
+            labels.add(minutesLabel(v) + " előtte" + (v == LessonReminder.DEFAULT_MIN ? " (alap)" : ""));
+            if (v == min) sel = i;
+        }
+        labels.add(sel < 0 ? "Egyéni: " + minutesLabel(min) + " előtte" : "Egyéni…");
+        if (sel < 0) sel = labels.size() - 1;
+        card.addView(Ui.field(act, "Hány perccel az óra előtt?", Ui.select(act, labels, sel, i -> {
+            if (i < LessonReminder.MINUTES.length) {
+                LessonReminder.setMinutes(act, LessonReminder.MINUTES[i]);
+                lessonChanged(act);
+            } else customMinutes(act);
+        })), Ui.lp(Ui.MATCH, Ui.WRAP));
+
+        if (!Notifs.permitted(act)) card.addView(step(act, "Értesítések engedélyezése", "enélkül a telefon nem tudja megjeleníteni", false, "Engedélyezés", act::askPermissions), Ui.lp(Ui.MATCH, Ui.WRAP));
+        else if (!Notifs.exactAllowed(act)) card.addView(step(act, "Pontos időzítés", "Ébresztők és emlékeztetők engedélye", false, "Engedélyezés", act::askPermissions), Ui.lp(Ui.MATCH, Ui.WRAP));
+
+        long next = LessonReminder.nextAt(act);
+        String what = LessonReminder.nextWhat(act);
+        if (next > 0) {
+            card.addView(Ui.small(act, "Következő emlékeztető: " + Dt.relDay(Dt.fromMillis(next)) + " " + Dt.fmtTime(Dt.fromMillis(next)) + (what.isEmpty() ? "" : " · " + what)), Ui.lp(Ui.MATCH, Ui.WRAP));
+        } else {
+            card.addView(Ui.text(act, "Most nincs beállított emlékeztető: a telefonon nincs eltárolva a következő órák órarendje. Nyisd meg az Órarendet, és a következő frissítés után beáll.", 12, Theme.g[2], false), Ui.lp(Ui.MATCH, Ui.WRAP));
+        }
+        if (!Notifs.enabled(act)) {
+            card.addView(Ui.small(act, "A háttér-ellenőrzés ki van kapcsolva, ezért az emlékeztető az appban legutóbb letöltött órarendből dolgozik: a változások (elmaradó óra, helyettesítés) csak akkor kerülnek bele, ha megnyitod az appot."), Ui.lp(Ui.MATCH, Ui.WRAP));
+        }
+        card.addView(Ui.smallButton(act, "Próba: így fog kinézni", Ui.B_DEFAULT, () -> {
+            if (!Notifs.permitted(act)) { act.askPermissions(); return; }
+            Async.run(() -> LessonReminder.test(act), real -> { if (!real) act.toast("Nincs tárolt következő óra, egy példával mutattam"); }, e -> act.toast("Hiba: " + e.getMessage()));
+        }), Ui.lp(Ui.WRAP, Ui.WRAP));
+        return card;
+    }
+
+    private static void customMinutes(MainActivity act) {
+        Ui.Sheet s = Ui.sheet(act, "Hány perccel az óra előtt?");
+        android.widget.EditText in = Ui.numberInput(act, "pl. 7", String.valueOf(LessonReminder.minutes(act)));
+        in.setInputType(android.text.InputType.TYPE_CLASS_NUMBER);
+        s.body.addView(Ui.field(act, "Perc (1–" + LessonReminder.MAX_MIN + ")", in), Ui.lp(Ui.MATCH, Ui.WRAP));
+        s.body.addView(Ui.button(act, "Mentés", Ui.B_PRIMARY, () -> {
+            int v;
+            try { v = Integer.parseInt(in.getText().toString().trim()); } catch (Exception e) { act.toast("Adj meg egy számot"); return; }
+            if (v < 1 || v > LessonReminder.MAX_MIN) { act.toast("1 és " + LessonReminder.MAX_MIN + " perc között lehet"); return; }
+            LessonReminder.setMinutes(act, v);
+            s.dismiss();
+            lessonChanged(act);
+        }), Ui.lp(Ui.MATCH, Ui.WRAP));
+        s.dlg.setOnCancelListener(d -> act.rerender());   // a választó visszaáll a mostani értékre
+        s.show();
     }
 
     private static View eveningRow(MainActivity act) {

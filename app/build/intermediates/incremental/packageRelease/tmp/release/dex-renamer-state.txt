@@ -1,4 +1,4 @@
-#Tue Nov 03 23:55:17 CET 2026
+#Thu Nov 05 19:41:30 CET 2026
 base.0=C\:\\Zsirkreta\\ZsirKretaAndroidApp\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
 base.1=C\:\\Zsirkreta\\ZsirKretaAndroidApp\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes2.dex
 path.0=classes.dex

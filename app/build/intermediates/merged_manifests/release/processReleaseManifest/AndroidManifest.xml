@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="hu.zsirkreta.app"
-    android:versionCode="7"
-    android:versionName="2.3" >
+    android:versionCode="9"
+    android:versionName="2.5" >
 
     <uses-sdk
         android:minSdkVersion="26"
         android:targetSdkVersion="37" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- a KeepAlive háttérfeladat hálózatot vár (setRequiredNetworkType): Android 14-től enélkül a JobScheduler SecurityException-t dob -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!-- beépített frissítés: a letöltött új verzió átadása az Android telepítőjének -->
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <!-- értesítések és háttér-ellenőrzés -->
@@ -38,6 +40,18 @@
         android:supportsRtl="false"
         android:theme="@style/Theme.ZsirKreta"
         android:usesCleartextTraffic="false" >
+
+        <!-- hibajelentés: GlitchTip (Sentry SDK); a release-t (csomagnév@verzió+kód) az SDK magától állítja -->
+        <meta-data
+            android:name="io.sentry.dsn"
+            android:value="https://7a6bd9a4f23840729de14b8a80f4fb13@app.glitchtip.com/29550" />
+        <meta-data
+            android:name="io.sentry.traces.sample-rate"
+            android:value="0.01" />
+        <meta-data
+            android:name="io.sentry.environment"
+            android:value="production" />
+
         <activity
             android:name="hu.zsirkreta.app.MainActivity"
             android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|uiMode|keyboard|keyboardHidden|density|fontScale|locale|layoutDirection"
@@ -68,18 +82,26 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
-        <!-- háttér-ellenőrzés és esti emlékeztető (csak az AlarmManager hívja) -->
+        <!-- háttér-ellenőrzés, esti és óra előtti emlékeztető (csak az AlarmManager hívja) -->
         <receiver
             android:name="hu.zsirkreta.app.bg.Alarms$Tick"
             android:exported="false" />
 
-        <!-- újraindítás / app-frissítés után az időzítés visszaállítása (csak védett rendszer-üzenetek) -->
+        <!-- a KRÉTA-belépés életben tartása (naponta kétszeri token-megújítás, csak a JobScheduler indíthatja) -->
+        <service
+            android:name="hu.zsirkreta.app.bg.KeepAlive"
+            android:exported="false"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <!-- újraindítás / app-frissítés / óraállítás után az időzítés visszaállítása (csak védett rendszer-üzenetek) -->
         <receiver
             android:name="hu.zsirkreta.app.bg.Alarms$Boot"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
             </intent-filter>
         </receiver>
 
@@ -96,7 +118,16 @@
             <meta-data
                 android:name="androidx.profileinstaller.ProfileInstallerInitializer"
                 android:value="androidx.startup" />
-        </provider>
+        </provider> <!-- 'android:authorities' must be unique in the device, across all apps -->
+        <provider
+            android:name="io.sentry.android.core.SentryInitProvider"
+            android:authorities="hu.zsirkreta.app.SentryInitProvider"
+            android:exported="false" />
+        <provider
+            android:name="io.sentry.android.core.SentryPerformanceProvider"
+            android:authorities="hu.zsirkreta.app.SentryPerformanceProvider"
+            android:exported="false"
+            android:initOrder="200" />
 
         <receiver
             android:name="androidx.profileinstaller.ProfileInstallReceiver"
@@ -117,6 +148,18 @@
                 <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
             </intent-filter>
         </receiver>
+        <!--
+         Must run before the managed runtime provider emitted by dotnet/android
+         so that sentry-native is already in the signal chain when the runtime
+         installs its own handlers. 
+         initOrder must stay higher than AppInitOrder-1 (1999999999) used by the .NET runtime:
+         https://github.com/dotnet/android/blob/3c50ff4573b5/src/Xamarin.Android.Build.Tasks/Utilities/ManifestDocument.cs#L724
+        -->
+        <provider
+            android:name="io.sentry.ndk.SentryNdkPreloadProvider"
+            android:authorities="hu.zsirkreta.app.SentryNdkPreloadProvider"
+            android:exported="false"
+            android:initOrder="2000000000" />
     </application>
 
 </manifest>

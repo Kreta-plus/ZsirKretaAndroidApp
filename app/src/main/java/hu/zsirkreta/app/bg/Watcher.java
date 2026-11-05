@@ -155,6 +155,8 @@ public final class Watcher {
         }
         save(c, a.ukey, s);
         Notifs.ran(c, err);
+        // ha közben friss órarend jött, az óra előtti emlékeztető ahhoz igazodik (a tárolt adatból, hálózat nélkül)
+        LessonReminder.reschedule(c);
         return err;
     }
 

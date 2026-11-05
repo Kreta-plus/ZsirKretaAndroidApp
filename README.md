@@ -11,12 +11,12 @@ jegyek, órarend, házi, hiányzások és statisztikák a saját KRÉTA-fiókodb
 
 > Ha korábban a 2.0-s (fejlesztői kulccsal aláírt) változat volt fent, azt egyszer törölni kell, mert a 2.1-től saját
 > kiadási kulccsal van aláírva, és az Android más kulccsal aláírt appot nem frissít. A beállításokat előtte a
-> Beállítások → Beállítások exportja gombbal mentsd ki, és telepítés után töltsd vissza.
+> Beállítások → Fiók és adatok → Beállítások exportja gombbal mentsd ki, és telepítés után töltsd vissza.
 
 ## Frissítés az appon belül
 
 * Indításkor (legfeljebb 6 óránként) az app megnézi az [`updates/latest.json`](updates/latest.json)-t. Ha van újabb verzió,
-  a Kezdőlap tetején megjelenik egy kártya az újdonságokkal; a Beállítások → Alkalmazás és frissítések résznél kézzel is kereshető.
+  a Kezdőlap tetején megjelenik egy kártya az újdonságokkal; a Beállítások → Frissítések résznél kézzel is kereshető.
 * „Frissítés”: letölti az APK-t (megszakadásnál folytatja), majd telepítés előtt ellenőrzi az SHA-256 ellenőrzőösszeget, a csomagnevet,
   a verziószámot és azt, hogy **ugyanazzal a kulccsal** van-e aláírva, mint a telepített app.
 * Ezután az Android saját telepítője kér megerősítést (első alkalommal az „ismeretlen forrás” engedélyt is). A belépés és a
@@ -24,7 +24,7 @@ jegyek, órarend, házi, hiányzások és statisztikák a saját KRÉTA-fiókodb
 
 ## Értesítések
 
-* Az app a háttérben **15 percenként** megnézi a KRÉTA-t (a Beállítások → Developer mód részben **1 perc és 2 óra** között állítható),
+* Az app a háttérben **15 percenként** megnézi a KRÉTA-t (a Beállítások → Fejlesztői résznél, developer módban **1 perc és 2 óra** között állítható),
   és szól, ha van: új jegy, új házi, bejelentett számonkérés, órarend-változás (ma és holnap: elmarad / helyettesítés),
   új hiányzás vagy késés (és ha valami igazolatlan maradt), új feljegyzés, új app-verzió. Este (alapból 19:00) emlékeztet
   a holnapi dolgozatokra, házikra és a táska tartalmára. Fajtánként ki-be kapcsolható, koppintásra a megfelelő képernyő nyílik.
@@ -35,6 +35,17 @@ jegyek, órarend, házi, hiányzások és statisztikák a saját KRÉTA-fiókodb
   automatikus indítást is engedélyezni kell, erre az app a Beállításokban útmutatót ad.
 * Ha az app épp nyitva van, nem küld értesítést (ott a felület maga jelzi az új adatot).
 * A KRÉTA felé ugyanaz a korlát érvényes, mint az appban: adatfajtánként legfeljebb percenként egy kérés.
+* **Óra előtti emlékeztető** (Beállítások → Értesítések): X perccel (1–180, alapból 5) **minden óra előtt**, vagy **csak a nap első
+  órája előtt** (ilyenkor a napi órák számával, a nap végével és a dolgozatokkal). Ez nem a KRÉTA-ból jön: a telefonon tárolt
+  órarendből számol, és a telefon órájára pontos ébresztőt állít, az ébresztőkor nincs hálózati kérés. Elmaradó órára nem szól,
+  az óra végén az értesítés magától eltűnik. Friss órarendnél, újraindítás és óraállítás után újraszámol. A háttér-ellenőrzéstől
+  független (az kikapcsolva is működik, csak akkor az appban legutóbb letöltött órarendből dolgozik).
+
+## Órarend a telefon órája szerint
+
+Hogy melyik óra tart épp („most · még 23 perc”, haladásjelzővel), mennyi múlva kezdődik a következő, és melyek múltak már el
+(halványak), azt az Órarend és a Kezdőlap a telefon órájából számolja, és percváltáskor frissíti, nem a KRÉTA-lekéréskor.
+Az Órarend a mai napot követi (éjfél után is átlép; hétvégén a következő hétfőt mutatja), amíg el nem lapozol róla.
 
 ## Új verzió kiadása
 
@@ -85,8 +96,10 @@ Kezdőlap (widgetek, mai órák, vicces mondat, story) · Jegyek (félév-szűr�
 Statisztika (11 diagram) · Órarend (nap/hét nézet, húzás) · Házi + számonkérések (helyi pipálás) · Hiányzások ·
 Feljegyzések · Nevek (saját tanár-/tantárgynevek, becenév) · Tervező (saját házik, dolgozatok) ·
 Táska (felszerelés tantárgyanként + teljes képernyős holnapi táska 4 elrendezéssel) ·
-Beállítások (téma: auto/sötét/világos/AMOLED, a weboldal 12 színtémája, kiemelő szín, háttér- és kártyastílus, sűrűség, betűméret, lekerekítés, kezdőoldal, súlyozott átlag, célátlag,
-widgetek, elrejtett tantárgyak, egyedi stílus, jótanuló mód, developer mód, export/import, kilépés, fiók törlése) ·
+Beállítások, csoportokba rendezve, mint a weben (🎨 Megjelenés: téma auto/sötét/világos/AMOLED, a weboldal 12 színtémája, kiemelő szín, háttér- és
+kártyastílus, sűrűség, betűméret, lekerekítés · 🏠 Kezdőlap: kezdőoldal, widgetek, vicces szöveg · 📘 Jegyek: súlyozott átlag, célátlag,
+elrejtett tantárgyak, jótanuló mód · 🔔 Értesítések: óra előtti emlékeztető, háttér-értesítések · 🧩 Egyedi CSS · 🔐 Fiók és adatok:
+export/import, kilépés, fiók törlése · 📲 Frissítések · 🛠️ Fejlesztői; telefonon csoportlista, széles kijelzőn oldalsáv) ·
 Story kép (1080×1920, mentés a Képek közé vagy megosztás) · Belépés, mint a weben: a KRÉTA saját oldalán (beépített böngésző), cím beillesztésével, teszt fiók ·
 Frissítés, mint a weben: percenként automatikusan (csak amíg az app előtérben van), belépés után azonnal friss adat, a gomb és az
 automatikus frissítés együtt is legfeljebb percenként kér a KRÉTA-tól, új adatnál „Frissítve, új adat: …” üzenet.

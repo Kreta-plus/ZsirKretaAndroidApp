@@ -39,7 +39,42 @@ public final class DashboardScreen extends Screen {
     // a webes --hl-* szövegkiemelő színek (a kezdőlap négy összesítője)
     private static final int HL_YELLOW = 0xFFFFE14D, HL_SKY = 0xFF5CC8FF, HL_PINK = 0xFFFF5FA2, HL_MINT = 0xFF45E3A0;   // naponta/óraszerkezetenként egy szöveg, hogy újrarajzoláskor ne változzon
 
+    private String drawnKey = "";                    // a rajzoláskori óra-állapot (a telefon órájából)
+    private TextView heroPill;                       // „Most: … · még 12 perc” / „Következő óra: …”, percenként frissül
+    private Lesson heroLesson;
+
     public DashboardScreen(MainActivity a) { super(a); }
+
+    /** Napszak (köszönés) + a mai órák állapota + a következő óra: ha változik, újra kell rajzolni. */
+    private static String clockKey(List<Lesson> ls, LocalDateTime now) {
+        int h = now.getHour();
+        StringBuilder b = new StringBuilder().append(h < 5 ? 0 : h < 11 ? 1 : h < 18 ? 2 : 3);
+        LocalDate today = now.toLocalDate();
+        for (Lesson l : ls) if (Dt.sameDay(l.start, today)) b.append(!l.end.isAfter(now) ? 'p' : l.start.isAfter(now) ? 'f' : 'n');
+        Lesson n = nextLesson(ls, now);
+        b.append('|').append(n == null ? "" : Dt.iso(n.start.toLocalDate()) + n.start.toLocalTime() + n.subject);
+        return b.toString();
+    }
+
+    /** Az épp tartó vagy a következő (el nem maradó) óra. */
+    private static Lesson nextLesson(List<Lesson> ls, LocalDateTime now) {
+        for (Lesson l : ls) if (l.end.isAfter(now) && !l.off) return l;
+        return null;
+    }
+
+    @Override public boolean clockChanged(LocalDateTime now) { return !clockKey(St.lessons(), now).equals(drawnKey); }
+
+    @Override public void tick(LocalDateTime now) {
+        if (heroPill != null && heroLesson != null) heroPill.setText(pillText(heroLesson, now));
+    }
+
+    private static String pillText(Lesson l, LocalDateTime now) {
+        String name = St.subjName(l.subject);
+        if (!l.start.isAfter(now)) return "Most: " + name + " · még " + Dt.duration(Dt.minutesUntil(now, l.end));
+        if (!Dt.sameDay(l.start, now.toLocalDate())) return "Következő óra: " + name + " · " + Dt.relDay(l.start) + " " + Dt.fmtTime(l.start);
+        long m = Dt.minutesUntil(now, l.start);
+        return "Következő óra: " + name + " · " + Dt.fmtTime(l.start) + (m <= 90 ? " (" + Dt.duration(m) + " múlva)" : "");
+    }
 
     @Override public String title() { return "ZsírKréta"; }
 
@@ -78,8 +113,8 @@ public final class DashboardScreen extends Screen {
         Double avgPrev = St.avgOf(prev);
         Double delta = avg != null && avgPrev != null && !last30.isEmpty() ? avg - avgPrev : null;
         List<Lesson> todayL = ls.stream().filter(l -> Dt.sameDay(l.start, today)).collect(Collectors.toList());
-        Lesson nextL = null;
-        for (Lesson l : ls) if (l.end.isAfter(now) && !l.off) { nextL = l; break; }
+        Lesson nextL = nextLesson(ls, now);
+        drawnKey = clockKey(ls, now);
         List<Homework> hwOpen = hw.stream().filter(h -> !h.done && !h.due.toLocalDate().isBefore(today)).collect(Collectors.toList());
         List<TestItem> testsNext = ts.stream().filter(t -> !t.date.toLocalDate().isBefore(today)).limit(5).collect(Collectors.toList());
         long unexc = ab.stream().filter(a -> !a.ok && !a.na).count();
@@ -116,7 +151,7 @@ public final class DashboardScreen extends Screen {
             if (todayL.isEmpty()) card.addView(Ui.empty(c(), "Ma nincs óra az órarendben 🎉"));
             else {
                 LinearLayout list = Ui.vbox(c(), 8);
-                for (Lesson l : todayL) list.addView(Rows.lesson(c(), l, l.end.isBefore(now), nextL != null && nextL.id.equals(l.id)), Ui.lp(Ui.MATCH, Ui.WRAP));
+                for (Lesson l : todayL) list.addView(Rows.lesson(c(), l, !l.end.isAfter(now), l == nextL), Ui.lp(Ui.MATCH, Ui.WRAP));
                 card.addView(list, Ui.lp(Ui.MATCH, Ui.WRAP));
             }
             root.addView(card, Ui.lp(Ui.MATCH, Ui.WRAP));
@@ -185,7 +220,7 @@ public final class DashboardScreen extends Screen {
 
         if (widgets.isEmpty()) {
             LinearLayout card = Ui.card(c());
-            card.addView(Ui.empty(c(), "Minden widget ki van kapcsolva. Beállítások → Jegyek és átlag."));
+            card.addView(Ui.empty(c(), "Minden widget ki van kapcsolva. Beállítások → Kezdőlap."));
             root.addView(card, Ui.lp(Ui.MATCH, Ui.WRAP));
         }
     }
@@ -216,8 +251,11 @@ public final class DashboardScreen extends Screen {
         top.setGravity(Gravity.TOP);
         card.addView(top, Ui.lp(Ui.MATCH, Ui.WRAP));
         card.addView(Ui.text(c(), Dt.longDay(now.toLocalDate()), 14, Theme.withAlpha(Theme.onAccent, 0.85f), false), Ui.margin(Ui.lp(Ui.WRAP, Ui.WRAP), 0, 6, 0, 0));
+        heroLesson = nextL;
+        heroPill = null;
         if (nextL != null) {
-            TextView pill = Ui.text(c(), "Következő óra: " + St.subjName(nextL.subject) + " · " + Dt.fmtTime(nextL.start), 13, Theme.onAccent, true);
+            TextView pill = Ui.text(c(), pillText(nextL, now), 13, Theme.onAccent, true);
+            heroPill = pill;
             pill.setBackground(Ui.shape(Theme.withAlpha(Theme.onAccent, 0.18f), 20));
             pill.setPadding(Ui.dp(12), Ui.dp(7), Ui.dp(12), Ui.dp(7));
             pill.setSingleLine(true);

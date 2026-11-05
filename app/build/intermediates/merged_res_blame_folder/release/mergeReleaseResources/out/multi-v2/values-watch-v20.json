@@ -4,7 +4,7 @@
             "outputFile": "hu.zsirkreta.app-mergeReleaseResources-39:/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/home/dani/.gradle/caches/9.6.0/transforms/42c07146ccad68a3f9429d405e592656/transformed/appcompat-1.8.0/res/values-watch-v20/values-watch-v20.xml",
+                    "source": "C:\\Users\\Benji\\.gradle\\caches\\9.6.0\\transforms\\42c07146ccad68a3f9429d405e592656\\transformed\\appcompat-1.8.0\\res\\values-watch-v20\\values-watch-v20.xml",
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",

@@ -6,8 +6,10 @@ import android.os.Bundle;
 
 import hu.zsirkreta.app.bg.Alarms;
 import hu.zsirkreta.app.bg.KeepAlive;
+import hu.zsirkreta.app.bg.LessonReminder;
 import hu.zsirkreta.app.bg.Notifs;
 import hu.zsirkreta.app.data.Config;
+import hu.zsirkreta.app.data.St;
 import hu.zsirkreta.app.data.Store;
 import hu.zsirkreta.app.data.Updater;
 import hu.zsirkreta.app.ui.Ui;
@@ -27,6 +29,8 @@ public class App extends Application {
         Notifs.createChannels(this);
         Alarms.ensure(this);
         KeepAlive.ensure(this);
+        // friss órarendnél az óra előtti emlékeztető újraszámol (a saját, tárolt adatból)
+        St.onTimetable = () -> LessonReminder.rescheduleSoon(this);
         registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
             @Override public void onActivityStarted(Activity a) { started++; }
             @Override public void onActivityStopped(Activity a) { started = Math.max(0, started - 1); }

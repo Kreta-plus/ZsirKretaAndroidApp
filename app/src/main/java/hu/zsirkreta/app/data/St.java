@@ -348,6 +348,7 @@ public final class St {
             try {
                 Raw r = Kreta.fetch(w, defaults(w), force && !w.equals("tanulo"));   // az adatlap ritkán változik
                 b.items.put(w, r);
+                if (w.equals("orarend") && !r.cached) timetableFetched();
                 if (!r.cached) b.refreshed = true;
                 if (r.stale) b.stale = true;
             } catch (KretaError e) {
@@ -383,11 +384,28 @@ public final class St {
         return changed;
     }
 
-    /** Egy hét órarendje (hétfőtől vasárnapig). */
-    public static Raw fetchWeek(LocalDate monday, boolean force) throws KretaError {
+    private static Map<String, String> weekParams(LocalDate monday) {
         Map<String, String> p = new HashMap<>();
         p.put("datumTol", Dt.iso(monday));
         p.put("datumIg", Dt.iso(monday.plusDays(6)));
-        return Kreta.fetch("orarend", p, force);
+        return p;
+    }
+
+    /** Egy hét órarendje (hétfőtől vasárnapig). */
+    public static Raw fetchWeek(LocalDate monday, boolean force) throws KretaError {
+        Raw r = Kreta.fetch("orarend", weekParams(monday), force);
+        if (!r.cached) timetableFetched();
+        return r;
+    }
+
+    /** Egy hét órarendje a telefonon tárolt adatból, hálózat nélkül (null, ha még nem töltöttük le). */
+    public static Raw storedWeek(LocalDate monday) { return Kreta.local("orarend", weekParams(monday)); }
+
+    /** Friss órarend jött a KRÉTA-ból (az app vagy a háttér-ellenőrzés kérte): az óra előtti emlékeztető újraszámol. */
+    public static volatile Runnable onTimetable;
+
+    private static void timetableFetched() {
+        Runnable r = onTimetable;
+        if (r != null) r.run();
     }
 }

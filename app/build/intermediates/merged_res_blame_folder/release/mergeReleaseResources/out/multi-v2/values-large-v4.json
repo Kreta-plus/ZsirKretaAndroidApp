@@ -4,7 +4,7 @@
             "outputFile": "hu.zsirkreta.app-mergeReleaseResources-39:/values-large-v4/values-large-v4.xml",
             "map": [
                 {
-                    "source": "/home/dani/.gradle/caches/9.6.0/transforms/6ebdaeabaa6754e6837dbc910da23479/transformed/material-1.14.0/res/values-large-v4/values-large-v4.xml",
+                    "source": "C:\\Users\\Benji\\.gradle\\caches\\9.6.0\\transforms\\6ebdaeabaa6754e6837dbc910da23479\\transformed\\material-1.14.0\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/dani/.gradle/caches/9.6.0/transforms/42c07146ccad68a3f9429d405e592656/transformed/appcompat-1.8.0/res/values-large-v4/values-large-v4.xml",
+                    "source": "C:\\Users\\Benji\\.gradle\\caches\\9.6.0\\transforms\\42c07146ccad68a3f9429d405e592656\\transformed\\appcompat-1.8.0\\res\\values-large-v4\\values-large-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10",
                         "startColumns": "4,4,4,4,4,4,4,4,4",

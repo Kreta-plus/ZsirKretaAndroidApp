@@ -33,7 +33,8 @@ public final class Notifs {
 
     // fajták: kulcs, csatorna neve, leírás, hova nyit koppintásra
     public static final String GRADES = "grades", HOMEWORK = "homework", TESTS = "tests", TIMETABLE = "timetable",
-            ABSENCES = "absences", NOTES = "notes", EVENING = "evening", UPDATE = "update", ACCOUNT = "account";
+            ABSENCES = "absences", NOTES = "notes", EVENING = "evening", UPDATE = "update", ACCOUNT = "account",
+            LESSON = "lesson";   // óra előtti emlékeztető (helyi, nem a KRÉTA-ból; a beállítása a LessonReminder-ben)
     public static final String[][] KINDS = {
             {GRADES, "Új jegy", "Ha új jegyet kapsz", "grades"},
             {HOMEWORK, "Új házi", "Új házi feladat, tantárggyal és határidővel", "homework"},
@@ -119,12 +120,16 @@ public final class Notifs {
             ch.setDescription(k[2]);
             nm.createNotificationChannel(ch);
         }
+        NotificationChannel les = new NotificationChannel(LESSON, "Óra előtti emlékeztető", NotificationManager.IMPORTANCE_HIGH);
+        les.setDescription("Néhány perccel az óra kezdése előtt (minden óra, vagy csak a nap első órája előtt)");
+        nm.createNotificationChannel(les);
         NotificationChannel acc = new NotificationChannel(ACCOUNT, "Fiók", NotificationManager.IMPORTANCE_DEFAULT);
         acc.setDescription("Ha újra be kell lépned a KRÉTA-ba");
         nm.createNotificationChannel(acc);
     }
 
     static String openFor(String kind) {
+        if (LESSON.equals(kind)) return "timetable";
         for (String[] k : KINDS) if (k[0].equals(kind)) return k[3];
         return "dashboard";
     }
@@ -141,7 +146,10 @@ public final class Notifs {
      * Egy értesítés. lines != null és több elem: összevont („3 új jegy”) értesítés a sorokkal (InboxStyle).
      * Koppintásra az app a megfelelő képernyőn nyílik meg.
      */
-    static void post(Context c, String kind, String title, String text, List<String> lines) {
+    static void post(Context c, String kind, String title, String text, List<String> lines) { post(c, kind, title, text, lines, 0); }
+
+    /** timeoutMs > 0: ennyi idő múlva az értesítés magától eltűnik (pl. az óra végén az óra előtti emlékeztető). */
+    static void post(Context c, String kind, String title, String text, List<String> lines, long timeoutMs) {
         if (!permitted(c)) return;
         Intent open = new Intent(c, MainActivity.class).putExtra(MainActivity.EXTRA_OPEN, openFor(kind))
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
@@ -156,6 +164,8 @@ public final class Notifs {
                 .setGroup(GROUP)
                 .setCategory(NotificationCompat.CATEGORY_EVENT)
                 .setPriority(kind.equals(UPDATE) || kind.equals(EVENING) ? NotificationCompat.PRIORITY_DEFAULT : NotificationCompat.PRIORITY_HIGH);
+        if (timeoutMs > 0) b.setTimeoutAfter(timeoutMs);
+        if (LESSON.equals(kind)) b.setCategory(NotificationCompat.CATEGORY_REMINDER);
         if (lines != null && lines.size() > 1) {
             NotificationCompat.InboxStyle in = new NotificationCompat.InboxStyle().setBigContentTitle(title);
             for (int i = 0; i < Math.min(7, lines.size()); i++) in.addLine(lines.get(i));

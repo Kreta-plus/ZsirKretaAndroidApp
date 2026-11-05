@@ -91,6 +91,14 @@ public final class Alarms {
         @Override public void onReceive(Context ctx, Intent intent) {
             final Context c = ctx.getApplicationContext();
             final String action = intent.getAction();
+            if (LessonReminder.ACTION.equals(action)) {
+                // az óra előtti emlékeztető független a háttér-ellenőrzéstől (nem kérdezi a KRÉTA-t)
+                final PendingResult pr = goAsync();
+                Async.bg(() -> {
+                    try { LessonReminder.fire(c); } finally { pr.finish(); }
+                });
+                return;
+            }
             if (!active(c)) { cancel(c); return; }
             // előbb a következő időpont, hogy hiba esetén se szakadjon meg a lánc
             if (TICK.equals(action)) scheduleTick(c, Notifs.intervalMin(c) * 60_000L);
@@ -109,12 +117,21 @@ public final class Alarms {
         }
     }
 
-    /** Újraindítás és app-frissítés után az ébresztők elvesznek: itt állítjuk vissza őket. */
+    /**
+     * Újraindítás és app-frissítés után az ébresztők elvesznek; a telefon órájának átállításakor (kézzel, időzóna-váltás)
+     * pedig rossz időpontra mutatnak. Itt állítjuk vissza őket.
+     */
     public static final class Boot extends BroadcastReceiver {
-        @Override public void onReceive(Context c, Intent intent) {
+        @Override public void onReceive(Context ctx, Intent intent) {
             String a = intent.getAction();
-            if (Intent.ACTION_BOOT_COMPLETED.equals(a) || Intent.ACTION_MY_PACKAGE_REPLACED.equals(a) || "android.intent.action.QUICKBOOT_POWERON".equals(a)) {
-                reschedule(c.getApplicationContext());
+            if (Intent.ACTION_BOOT_COMPLETED.equals(a) || Intent.ACTION_MY_PACKAGE_REPLACED.equals(a) || "android.intent.action.QUICKBOOT_POWERON".equals(a)
+                    || Intent.ACTION_TIME_CHANGED.equals(a) || Intent.ACTION_TIMEZONE_CHANGED.equals(a)) {
+                final Context c = ctx.getApplicationContext();
+                reschedule(c);
+                final PendingResult pr = goAsync();
+                Async.bg(() -> {
+                    try { LessonReminder.reschedule(c); } finally { pr.finish(); }
+                });
             }
         }
     }

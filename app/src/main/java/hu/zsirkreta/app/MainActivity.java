@@ -32,6 +32,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import hu.zsirkreta.app.bg.Alarms;
+import hu.zsirkreta.app.bg.LessonReminder;
 import hu.zsirkreta.app.bg.Notifs;
 import hu.zsirkreta.app.data.Kreta;
 import hu.zsirkreta.app.data.St;
@@ -97,6 +98,33 @@ public class MainActivity extends AppCompatActivity {
     private String pendingOpen;
     private boolean setupReturn = false;   // az értesítés-beállításból visszatérve frissítjük az állapotot
     private String drawnPermSig = "";      // az engedélyek állapota a legutóbbi rajzoláskor
+    private java.time.LocalDate drawnDate; // a legutóbbi rajzolás napja (éjfélkor minden képernyő újrarajzolódik)
+    private boolean clockOn = false;
+
+    /**
+     * A telefon órája: percváltáskor (TIME_TICK), kézi időállításkor és időzóna-váltáskor szól. Ebből frissül az órarend
+     * és a kezdőlap „most / következő óra” állapota, nem a KRÉTA-lekérésből.
+     */
+    private final android.content.BroadcastReceiver clock = new android.content.BroadcastReceiver() {
+        @Override public void onReceive(android.content.Context c, Intent i) {
+            clockTick();
+            if (resumed && !Intent.ACTION_TIME_TICK.equals(i.getAction())) alignMinuteTick();   // átállították az órát
+        }
+    };
+
+    /** A telefon órájának perchatárán fut (a rendszer TIME_TICK-je terhelés alatt pár másodpercet késhet). */
+    private final Runnable minuteTick = new Runnable() {
+        @Override public void run() {
+            if (!resumed) return;
+            clockTick();
+            alignMinuteTick();
+        }
+    };
+
+    private void alignMinuteTick() {
+        Async.handler().removeCallbacks(minuteTick);
+        Async.ui(minuteTick, 60_000 - System.currentTimeMillis() % 60_000 + 30);
+    }
 
     public interface WebLoginHandler { void onResult(String code, String verifier, String error); }
 
@@ -144,6 +172,7 @@ public class MainActivity extends AppCompatActivity {
         pendingOpen = getIntent() == null ? null : getIntent().getStringExtra(EXTRA_OPEN);
         getOnBackPressedDispatcher().addCallback(this, new OnBackPressedCallback(true) {
             @Override public void handleOnBackPressed() {
+                if (inApp && screen != null && screen.onBack()) return;
                 if (inApp && !current.equals(St.prefs.startView)) show(St.prefs.startView);
                 else { setEnabled(false); getOnBackPressedDispatcher().onBackPressed(); }
             }
@@ -165,6 +194,8 @@ public class MainActivity extends AppCompatActivity {
         resumed = false;
         Async.handler().removeCallbacks(autoTick);
         Async.handler().removeCallbacks(statusTick);
+        Async.handler().removeCallbacks(minuteTick);
+        if (clockOn) { try { unregisterReceiver(clock); } catch (Exception ignored) {} clockOn = false; }
     }
 
     @Override protected void onResume() {
@@ -173,6 +204,17 @@ public class MainActivity extends AppCompatActivity {
         // az állapotsor-időzítő a belépő képernyőn is fut (maga figyeli, belépett-e), így belépés után is frissül
         Async.handler().removeCallbacks(statusTick);
         Async.handler().post(statusTick);
+        if (!clockOn) {
+            android.content.IntentFilter f = new android.content.IntentFilter(Intent.ACTION_TIME_TICK);
+            f.addAction(Intent.ACTION_TIME_CHANGED);
+            f.addAction(Intent.ACTION_TIMEZONE_CHANGED);
+            f.addAction(Intent.ACTION_DATE_CHANGED);
+            androidx.core.content.ContextCompat.registerReceiver(this, clock, f, androidx.core.content.ContextCompat.RECEIVER_NOT_EXPORTED);
+            clockOn = true;
+        }
+        // háttérből visszatérve azonnal a mostani időhöz igazodunk (közben véget érhetett egy óra)
+        Async.ui(this::clockTick);
+        alignMinuteTick();
         if (installAfterPermission && Updater.state() == Updater.State.READY && Updater.canInstall(this)) {
             installAfterPermission = false;
             installUpdate();
@@ -180,6 +222,7 @@ public class MainActivity extends AppCompatActivity {
         Updater.checkIfDue(this);
         if (!inApp) return;
         Alarms.ensure(this);
+        LessonReminder.rescheduleSoon(this);
         // az engedély-ablakokból visszatérve: ha változott valamelyik engedély, frissül a kártya
         if (setupReturn || !permSig().equals(drawnPermSig)) { setupReturn = false; rerender(); }
         // háttérben nem kérdezünk; visszatéréskor pótoljuk, ha már esedékes
@@ -235,6 +278,7 @@ public class MainActivity extends AppCompatActivity {
         current = pendingOpen != null && indexOf(pendingOpen) >= 0 ? pendingOpen : St.prefs.startView;
         pendingOpen = null;
         Alarms.ensure(this);
+        LessonReminder.rescheduleSoon(this);
         buildShell();
         bootLoading = true;
         show(current);
@@ -437,6 +481,7 @@ public class MainActivity extends AppCompatActivity {
         boolean changed = !key.equals(current) || screen == null;
         current = key;
         screen = make(key);
+        if (changed) screen.entered();
         drawBottomBar();
         titleView.setText(key.equals("dashboard") ? "ZsírKréta" : LABELS[indexOf(key)]);
         draw();
@@ -453,6 +498,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void draw() {
         drawnPermSig = permSig();
+        drawnDate = java.time.LocalDate.now();
         content.removeAllViews();
         if (isLoading()) {
             for (int i = 0; i < 3; i++) content.addView(skeleton(), Ui.lp(Ui.MATCH, Ui.dp(96)));
@@ -493,6 +539,19 @@ public class MainActivity extends AppCompatActivity {
         scroll.post(() -> scroll.scrollTo(0, y));
     }
 
+    /** Újrarajzolás a lap tetejéről, rövid áttűnéssel (pl. a Beállításokban egy csoport megnyitása / bezárása). */
+    public void rerenderTop() {
+        if (!inApp || screen == null) return;
+        pendingRender = false;
+        draw();
+        updateFresh();
+        scroll.scrollTo(0, 0);
+        scroll.post(() -> scroll.scrollTo(0, 0));
+        content.setAlpha(0f);
+        content.setTranslationY(Ui.dp(8));
+        content.animate().alpha(1f).translationY(0).setDuration(160).start();
+    }
+
     private static long secs(long at) { return Math.max(1, (at - System.currentTimeMillis() + 999) / 1000); }
 
     /** Állapotsor a cím alatt: „Frissítés…”, vagy „frissítve 2 perce · újra 42 mp múlva”, vagy a KRÉTA állapota. */
@@ -526,6 +585,20 @@ public class MainActivity extends AppCompatActivity {
     };
 
     private final Runnable autoTick = () -> { if (inApp && resumed) refresh(true, true); };
+
+    /**
+     * A telefon órája szólt: ha az idő múlása miatt más látszana (véget ért egy óra, új nap), újrarajzolunk;
+     * különben a képernyő csak a percre pontos apróságokat frissíti („még 12 perc”). Hálózat nélkül.
+     */
+    private void clockTick() {
+        if (!inApp || screen == null || !resumed || isLoading()) return;
+        java.time.LocalDateTime now = java.time.LocalDateTime.now();
+        if (!now.toLocalDate().equals(drawnDate) || screen.clockChanged(now)) {
+            if (typing()) pendingRender = true; else rerender();
+        } else {
+            screen.tick(now);
+        }
+    }
 
     private void scheduleAuto(St.Bundle b) {
         Async.handler().removeCallbacks(autoTick);
@@ -644,6 +717,14 @@ public class MainActivity extends AppCompatActivity {
     public void setupNotifications() {
         Notifs.setEnabled(this, true);
         Alarms.reschedule(this);
+        askPermissions();
+    }
+
+    /**
+     * Csak az engedélyek sorban (értesítés, korlátozás nélküli háttér, pontos időzítés), a háttér-ellenőrzést nem kapcsolja be.
+     * Az óra előtti emlékeztető ezt kéri: az a KRÉTA nélkül, a tárolt órarendből működik.
+     */
+    public void askPermissions() {
         if (!Notifs.permitted(this)) {
             if (Build.VERSION.SDK_INT >= 33 && checkSelfPermission(android.Manifest.permission.POST_NOTIFICATIONS) != android.content.pm.PackageManager.PERMISSION_GRANTED) {
                 notifPermission.launch(android.Manifest.permission.POST_NOTIFICATIONS);
@@ -688,6 +769,7 @@ public class MainActivity extends AppCompatActivity {
         St.flushNow();
         stopAuto();
         Alarms.cancel(this);
+        LessonReminder.cancel(this);
         if (deleteData) Store.deleteAll(); else Store.logout();
         showLogin(null);
     }
