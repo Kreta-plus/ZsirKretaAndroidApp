@@ -1,22 +1,30 @@
 {
-  "versionCode": 10,
-  "versionName": "2.6",
+  "versionCode": 11,
+  "versionName": "2.7",
   "date": "2026-11-12",
   "minSdk": 26,
-  "apk": "ZsirKreta-2.6.apk",
-  "size": 9786320,
-  "sha256": "d40b1e256d8b0a996a30609de6a0928c9bd8256cba0e9c3acdb8345931607beb",
+  "apk": "ZsirKreta-2.7.apk",
+  "size": 9786316,
+  "sha256": "ed0f36a00152e9a08bef0856f4de811fc91f0696b35bba50cbb6989be199f810",
   "signer": "b6e7b48b6df708d95c563a5db89dd73993c5e916fb5a03c2b9a40e0f09d64ee8",
   "notes": [
-    "Új: a Jegyek oldal tantárgyanként mutatja az átlagot; koppints a tantárgyra a jegyeiért, a jegyre a részleteiért",
-    "Új: az órarendben az órára koppintva minden részlet látszik (dolgozat, házi, helyettesítés), a helyettesítés és az elmaradó óra kiemelve",
-    "Új: Kapcsolatok oldal a Discord-szerverrel, és hibabejelentés, ötlet vagy üzenet a fejlesztőknek (Továbbiak → Hiba / ötlet)",
-    "Új: oldalváltó animációk, mint a weboldalon (Beállítások → Megjelenés)",
-    "Új: jegyszínek, a Tervező új neve Jegyzetek, és bekerült az ÁSZF",
-    "Új: előzetes (pre-release) verziók a fejlesztőknek (Beállítások → Fejlesztői)",
-    "Hiány: (Az alkalmazásban nem írja a helyettesítéseket!!!)"
+    "Javítva: a helyettesítő tanár most már megjelenik az órarendben és az értesítésekben (eddig a KRÉTA rossz mezőjéből olvastuk)",
+    "Új: a házikra koppintva minden részlet látszik (teljes szöveg, határidő, tanár, melyik órára kell), és ott is késznek jelölhető",
+    "Javítva: a Megjelenés beállításainál a csúszkák nem ugrálnak, mindig átállnak, és állítás után nem ugrik el az oldal",
+    "Új: névtelen használati statisztika, hogy lássuk, hányan használják az appot"
   ],
   "versions": [
+    {
+      "versionCode": 11,
+      "versionName": "2.7",
+      "date": "2026-11-12",
+      "notes": [
+        "Javítva: a helyettesítő tanár most már megjelenik az órarendben és az értesítésekben (eddig a KRÉTA rossz mezőjéből olvastuk)",
+        "Új: a házikra koppintva minden részlet látszik (teljes szöveg, határidő, tanár, melyik órára kell), és ott is késznek jelölhető",
+        "Javítva: a Megjelenés beállításainál a csúszkák nem ugrálnak, mindig átállnak, és állítás után nem ugrik el az oldal",
+        "Új: névtelen használati statisztika, hogy lássuk, hányan használják az appot"
+      ]
+    },
     {
       "versionCode": 10,
       "versionName": "2.6",
