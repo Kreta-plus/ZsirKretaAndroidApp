@@ -1,18 +1,36 @@
 {
-  "versionCode": 9,
-  "versionName": "2.5",
-  "date": "2026-11-05",
+  "versionCode": 10,
+  "versionName": "2.6",
+  "date": "2026-11-12",
   "minSdk": 26,
-  "apk": "ZsirKreta-2.5.apk",
-  "size": 9752228,
-  "sha256": "ec86ec476e8f2ff604197da4d4a2bca56e091f5544bf851af2a365bba79f2b20",
+  "apk": "ZsirKreta-2.6.apk",
+  "size": 9786320,
+  "sha256": "d40b1e256d8b0a996a30609de6a0928c9bd8256cba0e9c3acdb8345931607beb",
   "signer": "b6e7b48b6df708d95c563a5db89dd73993c5e916fb5a03c2b9a40e0f09d64ee8",
   "notes": [
-    "Új: a belépés akkor is megmarad, ha napokig nem nyitod meg az appot (a háttérben naponta kétszer megújítja a KRÉTA-belépést)",
-    "Javítva: a KRÉTA átmeneti hibáinál (szerverhiba, karbantartás) az app nem léptet ki, hanem később újrapróbálja",
-    "Új: automatikus hibajelentés, hogy a hibákat gyorsabban javíthassuk"
+    "Új: a Jegyek oldal tantárgyanként mutatja az átlagot; koppints a tantárgyra a jegyeiért, a jegyre a részleteiért",
+    "Új: az órarendben az órára koppintva minden részlet látszik (dolgozat, házi, helyettesítés), a helyettesítés és az elmaradó óra kiemelve",
+    "Új: Kapcsolatok oldal a Discord-szerverrel, és hibabejelentés, ötlet vagy üzenet a fejlesztőknek (Továbbiak → Hiba / ötlet)",
+    "Új: oldalváltó animációk, mint a weboldalon (Beállítások → Megjelenés)",
+    "Új: jegyszínek, a Tervező új neve Jegyzetek, és bekerült az ÁSZF",
+    "Új: előzetes (pre-release) verziók a fejlesztőknek (Beállítások → Fejlesztői)",
+    "Hiány: (Az alkalmazásban nem írja a helyettesítéseket!!!)"
   ],
   "versions": [
+    {
+      "versionCode": 10,
+      "versionName": "2.6",
+      "date": "2026-11-12",
+      "notes": [
+        "Új: a Jegyek oldal tantárgyanként mutatja az átlagot; koppints a tantárgyra a jegyeiért, a jegyre a részleteiért",
+        "Új: az órarendben az órára koppintva minden részlet látszik (dolgozat, házi, helyettesítés), a helyettesítés és az elmaradó óra kiemelve",
+        "Új: Kapcsolatok oldal a Discord-szerverrel, és hibabejelentés, ötlet vagy üzenet a fejlesztőknek (Továbbiak → Hiba / ötlet)",
+        "Új: oldalváltó animációk, mint a weboldalon (Beállítások → Megjelenés)",
+        "Új: jegyszínek, a Tervező új neve Jegyzetek, és bekerült az ÁSZF",
+        "Új: előzetes (pre-release) verziók a fejlesztőknek (Beállítások → Fejlesztői)",
+        "Hiány: (Az alkalmazásban nem írja a helyettesítéseket!!!)"
+      ]
+    },
     {
       "versionCode": 9,
       "versionName": "2.5",
